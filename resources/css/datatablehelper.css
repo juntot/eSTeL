@@ -1,0 +1,71 @@
+/* DATATABLE */
+.datatable-container{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.dataTable{
+    width: 100% !important;
+}
+
+.dataTable th {
+    outline: 0;
+}
+
+
+th.sorting:after,
+th.sorting_asc:after,
+th.sorting_desc:after {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+  content: "arrow_back";
+  transform: rotate(90deg);
+  display: none;
+  vertical-align: middle;
+  float: right;
+}
+
+table.dataTable th.sorting:hover:after,
+table.dataTable th.sorting_asc:after,
+table.dataTable th.sorting_desc:after {
+  display: inline-block;
+}
+
+table.dataTable th.sorting_desc:after {
+  content: "arrow_forward";
+  float: right;
+}
+
+table.dataTable tbody tr:hover {
+  background-color: #EEE;
+}
+
+table.dataTable th:first-child,
+table.dataTable td:first-child {
+  padding: 0 0 0 24px;
+}
+
+table.dataTable th:last-child,
+table.dataTable td:last-child {
+  padding: 0 14px 0 0;
+}
+.dataTables_scrollHead{
+    /* top: 23px; */
+    z-index: 2;
+}
+.dataTables_scrollBody table {
+    position: relative;
+    top: -17px;
+}
+
+.dataTables_scrollBody thead{
+    visibility: hidden;
+}
+/* END */

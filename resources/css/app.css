@@ -5,7 +5,7 @@
     padding-top: 0 !important;
 }
 .padding-bottom-default{
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.75rem !important;
 }
 
 .padding-sides-0{
@@ -13,6 +13,9 @@
     padding-right: 0 !important;
 }
 
+.padding-all-rem-15{
+    padding: .75rem !important;
+}
 
 .m-top-15{
     margin-top: 15px;
@@ -25,9 +28,28 @@
 
 .relative{
     position: relative;
-    
 }
 
+
+.text-normal{
+    text-transform: none;
+}
+
+.l-gradient{
+    position: relative;
+}
+
+.l-gradient:before{
+    content:"";
+    position: absolute;
+    left:0;
+    right: 0;
+    height: 130px;
+    background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 
 .sidenav-overlay{
     z-index: 9;
@@ -52,6 +74,13 @@
 /* FORMS */
 .m-select-option .dropdown-content li>span{
     color: var(--main-text-color);
+}
+.m-select-option .select-dropdown.dropdown-content li.selected {
+    background-color: #b0bed9;
+}
+
+.m-select-option .select-dropdown{
+    width: 100% !important;
 }
 /* end */
 
@@ -229,6 +258,18 @@ hr.summary-line.yellow{
 }
 
 
+
+/* Game profile */
+
+.modal-game-profile{
+    max-width: 453px;
+    max-height: 285px;
+}
+
+#modal2.modal-game-profile{
+    max-height: 211px;
+}
+
 /* DATATABLE */
 
 #MyTableCheckAllButton{
@@ -342,4 +383,7 @@ th#square-minus.select-checkbox:after{
 
 /* END */
 
-
+/* Materialze table */
+table .operation{
+    width: 92px;
+}

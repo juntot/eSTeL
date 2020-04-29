@@ -18,6 +18,13 @@ import BallDraw3 from "./views/sub-views/BallDraw3";
 import Pares from "./views/sub-views/Pares";
 import BallDraw2 from "./views/sub-views/BallDraw2";
 import AllDraw from "./views/sub-views/AllDraw";
+import PowerAppReport from "./views/PowerAppReport";
+import WinningReport from "./views/WinningReport";
+import CommissionReport from "./views/CommissionReport";
+import RemittanceReport from "./views/RemittanceReport";
+import WinningClaimedReport from "./views/WinningClaimedReport";
+import UserAccount from "./views/UserAccount";
+import SearchAccount from "./views/SearchAccount";
 
 
 function App() {
@@ -45,6 +52,8 @@ function App() {
         <Switch>
           <Route path="/login" component={Login} />
           <ProtectedRoute exact path="/" component={Home} />
+          
+          {/* operation */}
           <ProtectedRoute path="/game-profile" component={GameProfile} />
           <ProtectedRoute path="/result-posting" component={ResultPosting} />
           <ProtectedRoute path="/employee" component={Employee} />
@@ -54,6 +63,20 @@ function App() {
           <ProtectedRoute path="/ball2" component={BallDraw2} />
           <ProtectedRoute path="/ball3" component={BallDraw3} />
           <ProtectedRoute path="/all-draw" component={AllDraw} />
+
+          {/* accounting */}
+          <ProtectedRoute path="/power-app" component={PowerAppReport} />
+          <ProtectedRoute path="/winning-report" component={WinningReport} />
+          
+          {/* treasury */}
+          <ProtectedRoute path="/commission-report" component={CommissionReport} />
+          <ProtectedRoute path="/remittance-report" component={RemittanceReport} />
+          <ProtectedRoute path="/winning-claimed-report" component={WinningClaimedReport} />
+
+          {/* account */}
+          <ProtectedRoute path="/user-account" component={UserAccount} />
+          <ProtectedRoute path="/search-account" component={SearchAccount} />
+
           <Route path="/location" component={Location} />
           <Route path="*" component={PageNotFound} />
         </Switch>

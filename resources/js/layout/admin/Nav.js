@@ -61,15 +61,18 @@ const Nav = (props) =>{
                                 <span className="white-text text-darken-2">
                                     <div className="profile-details">
                                         <span>Sean Lee</span><br/>
-                                        <span><a className="white-text padding-sides-0" >change password</a></span>
+                                        <span className="hide-on-small-only"><a className="white-text padding-sides-0" >change password</a></span>
                                     </div>
                                 </span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div className="metronic-white-bg padding-sides-15 hide-on-med-and-up show-on-small">
+                        <a className="padding-sides-0" >change password</a>
+                    </div>
                     <div className="metronic-white-bg profile-options">
-                        <button className="waves-effect waves-light btn margin-0 full-width" onClick={(e)=>{logout(e)}}>Logout</button>
+                        <button className="waves-effect waves-light btn margin-0 full-width text-normal" onClick={(e)=>{logout(e)}}>Logout</button>
                     </div>
             </div>  
                 

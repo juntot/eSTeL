@@ -136,11 +136,14 @@ class OperationNav extends React.Component {
                                     <span className="mc-sidebar-icon active">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xNavlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" >
                                             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                                {/* <rect id="bound" x="0" y="0" width="24" height="24"></rect>
                                                 <rect className="mc-sidebar-icon" id="Rectangle-62-Copy" fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
                                                 <rect className="mc-sidebar-icon" id="Rectangle-62-Copy-2" fill="#000000" x="8" y="9" width="3" height="11" rx="1.5"></rect>
                                                 <rect className="mc-sidebar-icon" id="Rectangle-62-Copy-4" fill="#000000" x="18" y="11" width="3" height="9" rx="1.5"></rect>
-                                                <rect className="mc-sidebar-icon" id="Rectangle-62-Copy-3" fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"></rect>
+                                                <rect className="mc-sidebar-icon" id="Rectangle-62-Copy-3" fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"></rect> */}
+                                                <rect x="0" y="0" width="24" height="24"/>
+                                                <path className="mc-sidebar-icon" d="M10.5,8 L6,19 C6.0352633,19.1332661 6.06268417,19.2312688 6.08226261,19.2940083 C6.43717645,20.4313361 8.07642225,21 9,21 C10.5,21 11,19 12.5,19 C14,19 14.5917308,20.9843119 16,21 C16.9388462,21.0104588 17.9388462,20.3437921 19,19 L14.5,8 L10.5,8 Z" fill="#000000"/>
+                                                <path className="mc-sidebar-icon" d="M11.3,6 L12.5,3 L13.7,6 L11.3,6 Z M14.5,8 L10.5,8 L14.5,8 Z" fill="#000000"/>
                                             </g>
                                         </svg>
                                     </span>
@@ -308,10 +311,8 @@ class OperationNav extends React.Component {
                                         <span className="mc-sidebar-icon active">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xNavlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" className="kt-svg-icon active">
 												<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-													<rect id="bound" x="0" y="0" width="24" height="24"></rect>
-													<path className="mc-sidebar-icon" d="M13.6855025,18.7082217 C15.9113859,17.8189707 18.682885,17.2495635 22,17 C22,16.9325178 22,13.1012863 22,5.50630526 L21.9999762,5.50630526 C21.9999762,5.23017604 21.7761292,5.00632908 21.5,5.00632908 C21.4957817,5.00632908 21.4915635,5.00638247 21.4873465,5.00648922 C18.658231,5.07811173 15.8291155,5.74261533 13,7 C13,7.04449645 13,10.79246 13,18.2438906 L12.9999854,18.2438906 C12.9999854,18.520041 13.2238496,18.7439052 13.5,18.7439052 C13.5635398,18.7439052 13.6264972,18.7317946 13.6855025,18.7082217 Z" id="Combined-Shape" fill="#000000"></path>
-													<path d="M10.3144829,18.7082217 C8.08859955,17.8189707 5.31710038,17.2495635 1.99998542,17 C1.99998542,16.9325178 1.99998542,13.1012863 1.99998542,5.50630526 L2.00000925,5.50630526 C2.00000925,5.23017604 2.22385621,5.00632908 2.49998542,5.00632908 C2.50420375,5.00632908 2.5084219,5.00638247 2.51263888,5.00648922 C5.34175439,5.07811173 8.17086991,5.74261533 10.9999854,7 C10.9999854,7.04449645 10.9999854,10.79246 10.9999854,18.2438906 L11,18.2438906 C11,18.520041 10.7761358,18.7439052 10.4999854,18.7439052 C10.4364457,18.7439052 10.3734882,18.7317946 10.3144829,18.7082217 Z" id="Path-41-Copy" fill="#000000" opacity="0.3"
-                                                    className="mc-sidebar-icon"></path>
+                                                    <rect x="0" y="0" width="24" height="24"/>
+                                                    <path className="mc-sidebar-icon" d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000" fillRule="nonzero"/>
 												</g>
 											</svg>
                                         </span>

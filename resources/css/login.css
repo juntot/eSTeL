@@ -18,10 +18,33 @@ body.login-body{
     color: var(--default-color);
     overflow: hidden;
 }
+#toast-container{
+    /* top:10%; */
+    max-width: 370px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#toast-container .alert-danger{
+    background: #f2dede;
+    border: 1px solid transparent;
+    border-color: #ebccd1;
+    color: #a94442;
+    padding: 10px;
+    /* color: black; */
+}
+#toast-container .alert-content{
+    align-items: center;
+}
+
+#toast-container .alert-msg{
+    padding-left: 8px;
+}
+
 
 .login .logo{
-    margin: 60px auto 20px;
+    margin: 54px auto 20px;
 }
+
 .login .logo h5{
     color: var(--purple);
 }
@@ -105,10 +128,22 @@ a{
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 414px) {
+    .login .logo{
+        margin: 54px auto 20px;
+    }
     .login .content{
         /* background-color: var(--white-bg); */
         width: 290px;
         padding: 20px 30px 15px;
         margin: 0 auto;
     }
-  }
+
+    #toast-container{
+        max-width: 290px !important;
+    }
+
+    #toast-container .toast{
+        max-width: 290px !important;
+        margin: 0 auto;
+    }
+}

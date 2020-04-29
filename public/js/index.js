@@ -37433,7 +37433,7 @@ var TreasuryNav = /*#__PURE__*/function (_React$Component) {
         className: "mc-sidebar-icon active",
         d: "M10.8226874,8.36941377 L12.7324324,9.82298668 C13.4112512,8.93113547 14.4592942,8.4 15.6,8.4 C17.5882251,8.4 19.2,10.0117749 19.2,12 C19.2,13.9882251 17.5882251,15.6 15.6,15.6 C14.5814697,15.6 13.6363389,15.1780547 12.9574041,14.4447676 L11.1963369,16.075302 C12.2923051,17.2590082 13.8596186,18 15.6,18 C18.9137085,18 21.6,15.3137085 21.6,12 C21.6,8.6862915 18.9137085,6 15.6,6 C13.6507856,6 11.9186648,6.9294879 10.8226874,8.36941377 Z",
         fill: "#000000",
-        "fill-rule": "nonzero",
+        fillRule: "nonzero",
         opacity: "0.3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
         className: "mc-sidebar-icon active",
@@ -38291,36 +38291,60 @@ var GameProfile = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "white-text"
       }, "Cut-Off"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col m4"
+        className: "col m4 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg z-depth-1 padding-all-rem-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "11AM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "col s12 metronic-white-bg z-depth-1 padding-all-rem-15 m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "11AM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "timepicker"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "textarea1"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "timepicker"
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col m4"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "textarea1"
+      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg z-depth-1 padding-all-rem-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "4PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "col s12 metronic-white-bg z-depth-1 padding-all-rem-15 m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "4PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "timepicker"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "textarea1"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "timepicker"
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col m4"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "textarea1"
+      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg z-depth-1 padding-all-rem-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "9PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "col s12 metronic-white-bg z-depth-1 padding-all-rem-15 m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "9PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "timepicker"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "textarea1"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "timepicker"
-      })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "textarea1"
+      }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15 padding-bottom-default"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Limit per combination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         "data-target": "modal1",
@@ -38462,34 +38486,34 @@ var GameProfile = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "ball1",
+        id: "ball11",
         placeholder: "0",
         type: "text",
         className: "validate"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "ball1"
+        htmlFor: "ball11"
       }, "1rst Ball"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m4 no-padding"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "ball2",
+        id: "ball22",
         placeholder: "0",
         type: "text",
         className: "validate"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "ball2"
+        htmlFor: "ball22"
       }, "2nd Ball"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m4 no-padding"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "ball3",
+        id: "ball33",
         placeholder: "0",
         type: "text",
         className: "validate"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "ball3"
+        htmlFor: "ball33"
       }, "3rd Ball"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-footer"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -39297,6 +39321,160 @@ var PowerAppReport = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(PowerAppReport, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, {
+        defaultDate: new Date(),
+        setDefaultDate: true
+      }); // DT
+
+      var dataSet = [{
+        name: 'JOhn DOe',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe1',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe2',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe3',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe4',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe5',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe6',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe7',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe8',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe9',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe10',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe11',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe12',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe13',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }];
+      var columnDefs = [{
+        title: "Accnt #",
+        data: 'name'
+      }, {
+        title: "Accnt Name",
+        data: 'position'
+      }, {
+        title: "Amount",
+        data: 'salary'
+      }, {
+        title: "Transaction By",
+        data: 'aw'
+      }, {
+        title: "Transaction Date",
+        data: 'aws'
+      }];
+      $('#example').DataTable({
+        data: dataSet,
+        columns: columnDefs,
+        buttons: [{
+          text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+          extend: 'print',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          title: '' // exportOptions: {
+          //     rows: function ( idx, data, node ) {
+          //       var dt = new $.fn.dataTable.Api('#example' );
+          //       var selected = dt.rows( { selected: true } ).indexes().toArray();
+          //       if( selected.length === 0 || $.inArray(idx, selected) !== -1)
+          //         return true;
+          //       return false;
+          //   }
+          // }
+
+        }],
+        // select: {
+        //     style: 'multi',
+        //     selector: 'td',
+        // },
+        "pagingType": "simple",
+        language: {
+          search: '',
+          searchPlaceholder: "Search records",
+          paginate: {
+            next: '<i class="material-icons">keyboard_arrow_right</i>',
+            // or '→'
+            previous: '<i class="material-icons">keyboard_arrow_left</i>' // or '←' 
+
+          },
+          lengthMenu: "Display _MENU_ records per page",
+          zeroRecords: "Nothing found - sorry",
+          // info: "_START_ _PAGE_ of _PAGES_",
+          info: "_START_ - _END_ of _TOTAL_",
+          infoEmpty: "No records available",
+          infoFiltered: "(filtered from _MAX_ total records)"
+        },
+        "dom": '<"top"f<"right-align m-top-15" B>>rt<"row bottom"<"col s6"i><"col s6 right-align"p>><"clear">',
+        "scrollX": true,
+        order: [[1, 'asc']]
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -39304,35 +39482,37 @@ var PowerAppReport = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "Power-App Report"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row padding-all-15 padding-top-0 m-top-15"
+        className: "row padding-all-15 padding-top-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Date Range"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m3 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "YtURL",
         type: "text",
-        className: "validate"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "active",
-        htmlFor: "YtURL"
-      }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
+        className: "datepicker"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m3 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "datepicker"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m6 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "waves-effect waves-light btn"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "material-icons left"
       }, "cloud_upload"), "Save"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "PreviewYt",
-        className: "col s12 metronic-white-bg m-top-15 display-none hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "iframeYt",
-        className: "padding-bottom-default"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        src: "",
-        frameBorder: "0",
-        allowFullScreen: true
-      })))))));
+        className: "clearfix"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Data Result"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        id: "example",
+        className: "display"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total Amount:"))))))));
     }
   }]);
 
@@ -39499,7 +39679,8 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
       elems = document.querySelectorAll('.datepicker');
       M.Datepicker.init(elems, {
         defaultDate: new Date(),
-        setDefaultDate: true
+        setDefaultDate: true,
+        disable: [new Date(2019, 3, 13), new Date(2020, 3, 29)]
       });
       elems = document.querySelectorAll('.timepicker');
       var instances = M.Timepicker.init(elems, {
@@ -39729,7 +39910,7 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
         className: "col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Select Recipients"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Data Result"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         id: "example",
         className: "display"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -39804,6 +39985,211 @@ var SearchAccount = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(SearchAccount, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // DT
+      var dataSet = [{
+        name: 'JOhn DOe',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe1',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe2',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe3',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe4',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe5',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe6',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe7',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe8',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe9',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe10',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe11',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe12',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe13',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }];
+      var columnDefs = [{
+        title: "Name",
+        data: 'name'
+      }, {
+        title: "Position",
+        data: 'position'
+      }, {
+        title: "Salary",
+        data: 'salary'
+      }, {
+        title: "aw",
+        data: 'aw'
+      }, {
+        title: "aws",
+        data: 'aws'
+      }, {
+        title: "awss",
+        data: 'awss'
+      }];
+      $('#example').DataTable({
+        data: dataSet,
+        columns: columnDefs,
+        buttons: [//  {
+        //     text: '<i class="fa fa-lg fa-file-text-o"></i>',
+        //     extend: 'csv',
+        //     className: 'btn btn-xs btn-primary p-5 m-0 width-35 assets-export-btn export-csv ttip',
+        //     title: 'export_filename',
+        //     extension: '.csv'
+        // }, 
+        {
+          text: "<a class=\"white-text\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\" viewBox=\"0 0 26 26\" width=\"26px\" height=\"26px\" style=\"&#10;    height: 21px;&#10;\"><path d=\"M 15 0 L 0 2.875 L 0 23.125 L 15 26 Z M 16 3 L 16 5.96875 L 19.03125 5.96875 L 19.03125 8 L 16 8 L 16 10 L 19 10 L 19 12 L 16 12 L 16 14 L 19 14 L 19 16 L 16 16 L 16 18 L 19 18 L 19 20 L 16 20 L 16 23 L 25.15625 23 C 25.617188 23 26 22.605469 26 22.125 L 26 3.875 C 26 3.394531 25.617188 3 25.15625 3 Z M 20 6 L 24 6 L 24 8 L 20 8 Z M 3.09375 7.9375 L 5.84375 7.9375 L 7.3125 11 C 7.425781 11.238281 7.535156 11.515625 7.625 11.84375 C 7.683594 11.644531 7.8125 11.359375 7.96875 10.96875 L 9.5625 7.9375 L 12.09375 7.9375 L 9.0625 12.96875 L 12.1875 18.09375 L 9.5 18.09375 L 7.75 14.78125 C 7.683594 14.660156 7.601563 14.421875 7.53125 14.09375 L 7.5 14.09375 C 7.46875 14.25 7.402344 14.496094 7.28125 14.8125 L 5.53125 18.09375 L 2.8125 18.09375 L 6.03125 13.03125 Z M 20 10 L 24 10 L 24 12 L 20 12 Z M 20 14 L 24 14 L 24 16 L 20 16 Z M 20 18 L 24 18 L 24 20 L 20 20 Z\" style=\"&#10;    fill: white;&#10;\"/></svg>\n                    Excel</a>",
+          extend: 'excel',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          filename: 'aws',
+          // title: 'export_filename',
+          extension: '.xls'
+        }, {
+          text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+          extend: 'print',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          title: '' // exportOptions: {
+          //     rows: function ( idx, data, node ) {
+          //       var dt = new $.fn.dataTable.Api('#example' );
+          //       var selected = dt.rows( { selected: true } ).indexes().toArray();
+          //       if( selected.length === 0 || $.inArray(idx, selected) !== -1)
+          //         return true;
+          //       return false;
+          //   }
+          // }
+
+        }],
+
+        /*  // buttons: [
+         //     {
+         //         text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+         //         extend: 'print',
+         //         className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+         //         title: '',
+         //         exportOptions: {
+         //             rows: function ( idx, data, node ) {
+         //               var dt = new $.fn.dataTable.Api('#example' );
+         //               var selected = dt.rows( { selected: true } ).indexes().toArray();
+                      
+         //               if( selected.length === 0 || $.inArray(idx, selected) !== -1)
+         //                 return true;
+                 
+                 //               return false;
+         //           }
+         //         }
+         //     }
+         //     // ,{
+         //     //     text: '<a class="white-text"><i class="material-icons left">print</i>Excel</a>',
+         //     //     extend: '',
+         //     //     className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+         //     // }
+         // ], */
+        // select: {
+        //     style: 'multi',
+        //     selector: 'td',
+        // },
+        "pagingType": "simple",
+        language: {
+          search: '',
+          searchPlaceholder: "Search records",
+          paginate: {
+            next: '<i class="material-icons">keyboard_arrow_right</i>',
+            // or '→'
+            previous: '<i class="material-icons">keyboard_arrow_left</i>' // or '←' 
+
+          },
+          lengthMenu: "Display _MENU_ records per page",
+          zeroRecords: "Nothing found - sorry",
+          // info: "_START_ _PAGE_ of _PAGES_",
+          info: "_START_ - _END_ of _TOTAL_",
+          infoEmpty: "No records available",
+          infoFiltered: "(filtered from _MAX_ total records)"
+        },
+        "dom": '<"top"f<"right-align m-top-15" B>>rt<"row bottom"<"col s6"i><"col s6 right-align"p>><"clear">',
+        "scrollX": true,
+        order: [[1, 'asc']]
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -39811,34 +40197,14 @@ var SearchAccount = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "Search Accounts"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row padding-all-15 padding-top-0 m-top-15"
+        className: "row padding-all-15 padding-top-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "YtURL",
-        type: "text",
-        className: "validate"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "active",
-        htmlFor: "YtURL"
-      }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "waves-effect waves-light btn"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "material-icons left"
-      }, "cloud_upload"), "Save"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "PreviewYt",
-        className: "col s12 metronic-white-bg m-top-15 display-none hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "iframeYt",
-        className: "padding-bottom-default"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        src: "",
-        frameBorder: "0",
-        allowFullScreen: true
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        id: "example",
+        className: "display"
       })))))));
     }
   }]);
@@ -40137,7 +40503,7 @@ var TextBlast = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Message Template"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field"
+        className: "input-field col m12 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         id: "textarea1",
         className: "materialize-textarea"
@@ -40227,35 +40593,48 @@ var UserAccount = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "User Accounts"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row padding-all-15 padding-top-0 m-top-15"
+        className: "row padding-all-15 padding-top-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "YtURL",
-        type: "text",
-        className: "validate"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "active",
-        htmlFor: "YtURL"
-      }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "waves-effect waves-light btn"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "material-icons left"
-      }, "cloud_upload"), "Save"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "PreviewYt",
-        className: "col s12 metronic-white-bg m-top-15 display-none hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "iframeYt",
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "General Coordinator"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        className: "highlight responsive-table"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Credit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Commision"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Coordinators"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$3.76"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "col m4 s12 padding-left-0"
+      }, "Total Credit:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "col m4 s12 padding-left-0"
+      }, "Total Commission:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "col m4 s12 padding-left-0"
+      }, "Total Coordinators:")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15 padding-bottom-default banner-image"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "d-flex relative banner-image-wrap"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m6 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15 z-depth-1 push-height"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Coordinator"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "padding-bottom-default"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        src: "",
-        frameBorder: "0",
-        allowFullScreen: true
-      })))))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        className: "highlight responsive"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Credit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Commission"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$3.76")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "col m4 s12 padding-left-0"
+      }, "Total Cred:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "col m4 s12 padding-left-0"
+      }, "Total Com:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "col m4 s12 padding-left-0"
+      }, "Total Player:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m6 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15 z-depth-1 push-height"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Operator"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "padding-bottom-default"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        className: "highlight responsive"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Operator"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "General Coor."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))))));
     }
   }]);
 
@@ -40414,6 +40793,171 @@ var WinningReport = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(WinningReport, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, {
+        defaultDate: new Date(),
+        setDefaultDate: true
+      });
+      elems = document.querySelectorAll('select');
+      M.FormSelect.init(elems); // DT
+
+      var dataSet = [{
+        name: 'JOhn DOe',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe1',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe2',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe3',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe4',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe5',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe6',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe7',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe8',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe9',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe10',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe11',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe12',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe13',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }];
+      var columnDefs = [{
+        title: "Transaction",
+        data: 'name'
+      }, {
+        title: "Draw Date",
+        data: 'position'
+      }, {
+        title: "Draw Sched",
+        data: 'salary'
+      }, {
+        title: "Game ID",
+        data: 'aw'
+      }, {
+        title: "Straight",
+        data: 'aws'
+      }, {
+        title: "Rumble",
+        data: 'aws'
+      }, {
+        title: "Winnings",
+        data: 'aws'
+      }, {
+        title: "Operator",
+        data: 'aws'
+      }];
+      $('#example').DataTable({
+        data: dataSet,
+        columns: columnDefs,
+        buttons: [{
+          text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+          extend: 'print',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          title: '' // exportOptions: {
+          //     rows: function ( idx, data, node ) {
+          //       var dt = new $.fn.dataTable.Api('#example' );
+          //       var selected = dt.rows( { selected: true } ).indexes().toArray();
+          //       if( selected.length === 0 || $.inArray(idx, selected) !== -1)
+          //         return true;
+          //       return false;
+          //   }
+          // }
+
+        }],
+        // select: {
+        //     style: 'multi',
+        //     selector: 'td',
+        // },
+        "pagingType": "simple",
+        language: {
+          search: '',
+          searchPlaceholder: "Search records",
+          paginate: {
+            next: '<i class="material-icons">keyboard_arrow_right</i>',
+            // or '→'
+            previous: '<i class="material-icons">keyboard_arrow_left</i>' // or '←' 
+
+          },
+          lengthMenu: "Display _MENU_ records per page",
+          zeroRecords: "Nothing found - sorry",
+          // info: "_START_ _PAGE_ of _PAGES_",
+          info: "_START_ - _END_ of _TOTAL_",
+          infoEmpty: "No records available",
+          infoFiltered: "(filtered from _MAX_ total records)"
+        },
+        "dom": '<"top"f<"right-align m-top-15" B>>rt<"row bottom"<"col s6"i><"col s6 right-align"p>><"clear">',
+        "scrollX": true,
+        order: [[1, 'asc']]
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -40421,35 +40965,86 @@ var WinningReport = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "Winning Report"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row padding-all-15 padding-top-0 m-top-15"
+        className: "row padding-all-15 padding-top-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Date Range"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m3 s12 m-select-option"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "YtURL",
         type: "text",
-        className: "validate"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "active",
-        htmlFor: "YtURL"
-      }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "waves-effect waves-light btn"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "datepicker"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m3 s12 m-select-option"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "datepicker"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "clearfix"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m3 s12 m-select-option"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "",
+        disabled: true
+      }, "Choose your option"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "1"
+      }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "2"
+      }, "Pares"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "2"
+      }, "Swer 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "3"
+      }, "Swer 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Game Type")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m3 s12 m-select-option"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "",
+        disabled: true
+      }, "Choose your option"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "1"
+      }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "1"
+      }, "9AM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "2"
+      }, "11PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "3"
+      }, "4PM")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Draw Sched")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m4 s12 m-select-option"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "",
+        disabled: true
+      }, "Choose your option"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "1"
+      }, "Operator 1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "2"
+      }, "Operator 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "3"
+      }, "Operator 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Operator")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col padding-sides-0 m2 s12 right-align"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light",
+        type: "submit",
+        name: "action"
+      }, "Load", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "material-icons left"
-      }, "cloud_upload"), "Save"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "PreviewYt",
-        className: "col s12 metronic-white-bg m-top-15 display-none hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "iframeYt",
-        className: "padding-bottom-default"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        src: "",
-        frameBorder: "0",
-        allowFullScreen: true
-      })))))));
+      }, "cloud_download")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Data Result"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        id: "example",
+        className: "display"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-tb-15 col m4 s12 padding-left-0"
+      }, "Total Straight:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-tb-15 col m4 s12 padding-left-0"
+      }, "Total Rumble:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-tb-15 col m4 s12 padding-left-0"
+      }, "Total Winnings:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "clearfix"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))))));
     }
   }]);
 

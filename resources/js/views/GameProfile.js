@@ -48,31 +48,49 @@ class GameProfile extends React.Component{
                                     <div className="relative">
                                         <p className="white-text">Cut-Off</p>
                                         <br/>
-                                        <div className="col m4">
-                                            <div className="col s12 metronic-white-bg z-depth-1 padding-all-rem-15">
+                                        <div className="col m4 s12">
+                                            <div className="col s12 metronic-white-bg z-depth-1 padding-all-rem-15 m-top-15">
                                                 <label>11AM</label>
                                                 <div>
-                                                    <input type="text" className="timepicker"/>
-                                                    <input type="text" className="timepicker"/>
+                                                    <div className="input-field">
+                                                        <input type="text" className="timepicker"/>
+                                                        <label htmlFor="textarea1"></label>
+                                                    </div>
+                                                    <div className="input-field">
+                                                        <input type="text" className="timepicker"/>
+                                                        <label htmlFor="textarea1"></label>
+                                                    </div>
                                                 </div>
                                                 
                                             </div>
                                         </div>
-                                        <div className="col m4">
-                                            <div className="col s12 metronic-white-bg z-depth-1 padding-all-rem-15">
+                                        <div className="col m4 s12">
+                                            <div className="col s12 metronic-white-bg z-depth-1 padding-all-rem-15 m-top-15">
                                                 <label>4PM</label>
                                                 <div>
-                                                    <input type="text" className="timepicker"/>
-                                                    <input type="text" className="timepicker"/>
+                                                    <div className="input-field s12">
+                                                        <input type="text" className="timepicker"/>
+                                                        <label htmlFor="textarea1"></label>
+                                                    </div>
+                                                    <div className="input-field">
+                                                        <input type="text" className="timepicker"/>
+                                                        <label htmlFor="textarea1"></label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col m4">
-                                            <div className="col s12 metronic-white-bg z-depth-1 padding-all-rem-15">
+                                        <div className="col m4 s12">
+                                            <div className="col s12 metronic-white-bg z-depth-1 padding-all-rem-15 m-top-15">
                                                 <label>9PM</label>
                                                 <div>
-                                                    <input type="text" className="timepicker"/>
-                                                    <input type="text" className="timepicker"/>
+                                                    <div className="input-field">
+                                                        <input type="text" className="timepicker"/>
+                                                        <label htmlFor="textarea1"></label>
+                                                    </div>
+                                                    <div className="input-field">
+                                                        <input type="text" className="timepicker"/>
+                                                        <label htmlFor="textarea1"></label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -246,20 +264,20 @@ class GameProfile extends React.Component{
                                 <div className="row">
                                     <div className="col m4 no-padding">
                                         <div className="input-field col s12">
-                                            <input id="ball1" placeholder="0" type="text" className="validate" />
-                                            <label htmlFor="ball1">1rst Ball</label>
+                                            <input id="ball11" placeholder="0" type="text" className="validate" />
+                                            <label htmlFor="ball11">1rst Ball</label>
                                         </div>
                                     </div>
                                     <div className="col m4 no-padding">
                                         <div className="input-field col s12">
-                                            <input id="ball2" placeholder="0" type="text" className="validate" />
-                                            <label htmlFor="ball2">2nd Ball</label>
+                                            <input id="ball22" placeholder="0" type="text" className="validate" />
+                                            <label htmlFor="ball22">2nd Ball</label>
                                         </div>
                                     </div>
                                     <div className="col m4 no-padding">
                                         <div className="input-field col s12">
-                                            <input id="ball3" placeholder="0" type="text" className="validate" />
-                                            <label htmlFor="ball3">3rd Ball</label>
+                                            <input id="ball33" placeholder="0" type="text" className="validate" />
+                                            <label htmlFor="ball33">3rd Ball</label>
                                         </div>
                                     </div>
                                 </div>

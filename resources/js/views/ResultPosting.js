@@ -12,6 +12,9 @@ class ResultPosting extends React.Component{
         M.Datepicker.init(elems,{
             defaultDate: new Date(),
             setDefaultDate: true,
+            disable: [
+                new Date(2019,3,13),
+                new Date(2020,3,29)]
         });
 
         elems = document.querySelectorAll('.timepicker');
@@ -155,7 +158,7 @@ class ResultPosting extends React.Component{
                             </div>
                             <div className="col s12">
                                 <div className="col s12 metronic-white-bg m-top-15">
-                                    <p>Select Recipients</p>
+                                    <p>Data Result</p>
                                     
 
                                     <table id="example" className="display" ></table>

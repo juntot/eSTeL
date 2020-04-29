@@ -8,6 +8,9 @@
     padding-bottom: 0.75rem !important;
 }
 
+.padding-left-0{
+    padding-left: 0 !important;
+}
 .padding-sides-0{
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -25,6 +28,7 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
 
 .relative{
     position: relative;
@@ -46,9 +50,31 @@
     right: 0;
     height: 130px;
     background: #000046; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+.banner-image{
+    position: relative;
+    
+}
+.banner-image .banner-image-wrap{
+    padding-top: 62px;
+}
+
+.banner-image::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: #000046;
+    background: -webkit-linear-gradient(to right, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url('/stl/public/imgs/bg-1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sidenav-overlay{
@@ -133,7 +159,9 @@ hr.summary-line.yellow{
 }
 
 .d-flex .push-height{
-    min-height: 100%;
+    
+    /* min-height: 100%; */
+    height: 100%;
 }
 
 #chartJSContainer-line-graph{
@@ -144,7 +172,7 @@ hr.summary-line.yellow{
 }
 
 .player-stat{
-    line-height: 43px;
+    line-height: 64px;
 }
 .player-stat span{
     display: block;

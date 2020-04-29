@@ -166,7 +166,7 @@ class TextBlast extends React.Component{
                             <div className="col s12">
                                 <div className="col s12 metronic-white-bg m-top-15">
                                     <p>Message Template</p>
-                                    <div className="input-field">
+                                    <div className="input-field col m12 s12">
                                         <textarea id="textarea1" className="materialize-textarea"></textarea>
                                         <label htmlFor="textarea1">Message Here...</label>
                                     </div>

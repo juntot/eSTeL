@@ -202,13 +202,13 @@ class ResultPosting extends React.Component{
                                             <label>Date Draw</label> 
                                         </div>
                                     </div> */}
-                                    <div className="m-date-picker input-field col m3 s12">
+                                    <div className="m-date-picker input-field col m4 s12">
                                         <input type="text" className="datepicker-modals" />
                                         <label>Date Draw</label> 
                                     </div>
                                         
                                     {/* </div> */}
-                                    <div className="col m6 s12">
+                                    <div className="col m8 s12">
                                         <div className="input-field">
                                             <input type="text" className="timepicker-modal"  />
                                             <label>Schedule</label> 

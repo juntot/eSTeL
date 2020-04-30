@@ -37913,6 +37913,170 @@ var CommissionReport = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(CommissionReport, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // DT
+      var dataSet = [{
+        name: 'JOhn DOe',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe1',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe2',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe3',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe4',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe5',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe6',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe7',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe8',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe9',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe10',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe11',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe12',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe13',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }];
+      var columnDefs = [{
+        title: "Acct #",
+        data: 'name'
+      }, {
+        title: "Acct Name",
+        data: 'position'
+      }, {
+        title: "Selected Date Commission",
+        data: 'salary'
+      }, {
+        title: "Total Commission",
+        data: 'aw'
+      }, {
+        title: "Account Type",
+        data: 'aws'
+      }];
+      $('#example').DataTable({
+        data: dataSet,
+        columns: columnDefs,
+        buttons: [{
+          text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+          extend: 'print',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          title: '',
+          exportOptions: {
+            rows: function rows(idx, data, node) {
+              var dt = new $.fn.dataTable.Api('#example');
+              var selected = dt.rows({
+                selected: true
+              }).indexes().toArray();
+              if (selected.length === 0 || $.inArray(idx, selected) !== -1) return true;
+              return false;
+            }
+          }
+        }],
+        select: {
+          style: 'multi',
+          selector: 'td'
+        },
+        "pagingType": "simple",
+        language: {
+          search: '',
+          searchPlaceholder: "Search records",
+          paginate: {
+            next: '<i class="material-icons">keyboard_arrow_right</i>',
+            // or '→'
+            previous: '<i class="material-icons">keyboard_arrow_left</i>' // or '←' 
+
+          },
+          lengthMenu: "Display _MENU_ records per page",
+          zeroRecords: "Nothing found - sorry",
+          // info: "_START_ _PAGE_ of _PAGES_",
+          info: "_START_ - _END_ of _TOTAL_",
+          infoEmpty: "No records available",
+          infoFiltered: "(filtered from _MAX_ total records)"
+        },
+        "dom": '<"top"f<"right-align m-top-15" B>>rt<"row bottom"<"col s6"i><"col s6 right-align"p>><"clear">',
+        "scrollX": true,
+        order: [[1, 'asc']]
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -37920,35 +38084,50 @@ var CommissionReport = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "Commision Report"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row padding-all-15 padding-top-0 m-top-15"
+        className: "row padding-all-15 padding-top-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Report type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12 m-tb-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "with-gap",
+        name: "group3",
+        type: "radio",
+        checked: true
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Claimed Commission Report"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m8 s12 m-tb-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "with-gap",
+        name: "group3",
+        type: "radio"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Payable Commission Report"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker input-field col m4 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "YtURL",
         type: "text",
-        className: "validate"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "active",
-        htmlFor: "YtURL"
-      }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "datepicker"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date from")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker input-field col m4 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "datepicker"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date to")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col s2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "waves-effect waves-light btn"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "material-icons left"
-      }, "cloud_upload"), "Save"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "PreviewYt",
-        className: "col s12 metronic-white-bg m-top-15 display-none hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "iframeYt",
-        className: "padding-bottom-default"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        src: "",
-        frameBorder: "0",
-        allowFullScreen: true
-      })))))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light",
+        type: "submit",
+        name: "action"
+      }, "Load Report", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "material-icons right"
+      }, "send"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Data Result"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        id: "example",
+        className: "display"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total  Selected Date Commission:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total Commission Balance")))))));
     }
   }]);
 
@@ -39674,6 +39853,7 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
   _createClass(ResultPosting, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      M.updateTextFields();
       var elems = document.querySelectorAll('select');
       M.FormSelect.init(elems);
       elems = document.querySelectorAll('.datepicker');
@@ -39691,7 +39871,20 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
 
       instances[0].done();
       elems = document.querySelectorAll('.modal');
-      M.Modal.init(elems); // DT
+      M.Modal.init(elems); // datpicker for modals
+
+      elems = document.querySelectorAll('.datepicker-modals');
+      M.Datepicker.init(elems, {
+        defaultDate: new Date(),
+        // setDefaultDate: true,
+        disable: [new Date(2019, 3, 13), new Date(2020, 3, 29)],
+        container: 'body'
+      });
+      elems = document.querySelectorAll('.timepicker-modal');
+      M.Timepicker.init(elems, {
+        defaultTime: 'now',
+        container: 'body'
+      }); // DT
 
       var dataSet = [{
         name: 'JOhn DOe',
@@ -39793,22 +39986,25 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
         awss: '1000'
       }];
       var columnDefs = [{
-        title: "Name",
+        title: "Acct #",
         data: 'name'
       }, {
-        title: "Position",
+        title: "Trans #",
         data: 'position'
       }, {
-        title: "Salary",
+        title: "Combination",
         data: 'salary'
       }, {
-        title: "aw",
+        title: "Straight",
         data: 'aw'
       }, {
-        title: "aws",
+        title: "Rumble",
         data: 'aws'
       }, {
-        title: "awss",
+        title: "Total Bet",
+        data: 'awss'
+      }, {
+        title: "Time Posted",
         data: 'awss'
       }];
       $('#example').DataTable({
@@ -39871,10 +40067,8 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
         className: "col s12 metronic-white-bg m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "waves-effect waves-light btn modal-trigger",
-        href: "#modal1"
-      }, "Modal")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "d-flex mobile-block res-posting"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        href: "#modal-res-posting"
+      }, "Add Posting")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col m4 s12 m-select-option"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "",
@@ -39886,27 +40080,25 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
         value: "2"
       }, "Swer 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "3"
-      }, "Swer 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col m3 s12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "m-date-picker"
+      }, "Swer 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Game type")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker input-field col m3 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "datepicker"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date Draw")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col m3 s12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "timepicker"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col padding-sides-0 m2 s12 right-align"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Schedule")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field padding-sides-0 col m2 s12 right-align"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn waves-effect waves-light",
         type: "submit",
         name: "action"
       }, "Load", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "material-icons left"
-      }, "cloud_download")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "cloud_download"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15"
@@ -39914,16 +40106,61 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
         id: "example",
         className: "display"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "modal1",
-        className: "modal"
+        id: "modal-res-posting",
+        className: "modal modal-fixed-footer modal-result-posting"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-content"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Modal Header"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A bunch of text")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker input-field col m3 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "datepicker-modals"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date Draw")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m6 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "timepicker-modal"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Schedule"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "modal-ball1",
+        type: "text"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "active",
+        htmlFor: "modal-ball1"
+      }, "Ball 1"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "modal-ball2",
+        type: "text"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "active",
+        htmlFor: "modal-ball2"
+      }, "Ball 2"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "modal-ball3",
+        type: "text"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "active",
+        htmlFor: "modal-ball3"
+      }, "Ball 3"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-footer"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#!",
-        className: "modal-close waves-effect waves-green btn-flat"
-      }, "Agree"))))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light",
+        type: "submit",
+        name: "action"
+      }, "Add Post"))))));
     }
   }]);
 
@@ -40611,7 +40848,7 @@ var UserAccount = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15 padding-bottom-default banner-image"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "d-flex relative banner-image-wrap"
+        className: "d-flex mobile-block relative banner-image-wrap"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m6 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

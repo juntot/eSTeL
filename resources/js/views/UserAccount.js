@@ -62,7 +62,7 @@ class UserAccount extends React.Component {
                             {/* <div className="clearfix"></div> */}
                             <div className="col s12">
                                 <div className="col s12 metronic-white-bg m-top-15 padding-bottom-default banner-image">
-                                    <div className="d-flex relative banner-image-wrap">
+                                    <div className="d-flex mobile-block relative banner-image-wrap">
                                         <div className="col m6 s12">
                                             <div className="col s12 metronic-white-bg m-top-15 z-depth-1 push-height">
                                                 <p>Coordinator</p>

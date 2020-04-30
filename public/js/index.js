@@ -36046,6 +36046,31 @@ var Auth = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./resources/js/components/DashBoardBanner.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/DashBoardBanner.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var DashBoardBanner = function DashBoardBanner() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col s12 metronic-white-bg dashboard-header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "center-align"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "LIVE TRENDS ALL GAMES")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARCH 23, 2020 - 11AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CUTOFF TIME 10:50:00 AM - 11:30:00 AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Sat Apr 25 2020 5:29:57 PM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DashBoardBanner);
+
+/***/ }),
+
 /***/ "./resources/js/components/DataTable.js":
 /*!**********************************************!*\
   !*** ./resources/js/components/DataTable.js ***!
@@ -37537,6 +37562,112 @@ var TreasuryNav = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/PlayerStatBar.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/PlayerStatBar.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var PlayerStatBar = function PlayerStatBar(props) {
+  var myStyle = {
+    width: (props.percent_val || '').split("%", 1) + '%'
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bar-wrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-sides-0 col s10"
+  }, (props.percent_val ? props.percent_val + '% ' : '') + (props.label || '')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-sides-0 col s2 right-align"
+  }, props.total || '0'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clearfix"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: myStyle
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PlayerStatBar);
+
+/***/ }),
+
+/***/ "./resources/js/components/SummaryGrid.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/SummaryGrid.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var SummaryGrid = function SummaryGrid(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "colx s12 metronic-white-bg summary-grid push-height"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.val || ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    className: "summary-line " + props.hr_color
+  }), props.grd_label || '');
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SummaryGrid);
+
+/***/ }),
+
+/***/ "./resources/js/components/ToptenCombination.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/ToptenCombination.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var TopTenCombination = function TopTenCombination(props) {
+  var header = props.header.map(function (data, key) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      key: key
+    }, data.title);
+  });
+
+  var td_rec = function td_rec(obj) {
+    return props.header.map(function (data, key) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        key: key
+      }, obj[data.data]);
+    });
+  };
+
+  var tbl_data = props.data.map(function (data, key) {
+    console.log(props.header.data);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      key: key
+    }, td_rec(data));
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.title || ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "highlight responsive-table"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, header || '')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, tbl_data || ''))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TopTenCombination);
+
+/***/ }),
+
 /***/ "./resources/js/index.js":
 /*!*******************************!*\
   !*** ./resources/js/index.js ***!
@@ -37723,10 +37854,10 @@ var Nav = function Nav(props) {
   }, "Old Password")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-field col s12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: "old_pass",
+    id: "new_pass",
     type: "text"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "old_pass"
+    htmlFor: "new_pass"
   }, "New Password")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "modal-footer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -38836,6 +38967,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_admin_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _components_DataTable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/DataTable */ "./resources/js/components/DataTable.js");
+/* harmony import */ var _components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/DashBoardBanner */ "./resources/js/components/DashBoardBanner.js");
+/* harmony import */ var _components_SummaryGrid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/SummaryGrid */ "./resources/js/components/SummaryGrid.js");
+/* harmony import */ var _components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/PlayerStatBar */ "./resources/js/components/PlayerStatBar.js");
+/* harmony import */ var _components_ToptenCombination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ToptenCombination */ "./resources/js/components/ToptenCombination.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38857,6 +38992,10 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
 
 
 
@@ -38956,53 +39095,49 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "row padding-all-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg dashboard-header"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "center-align"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "LIVE TRENDS ALL GAMES")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARCH 23, 2020 - 11AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CUTOFF TIME 10:50:00 AM - 11:30:00 AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Sat Apr 25 2020 5:29:57 PM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Straight")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        val: "35",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "Rumble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        val: "40",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Total"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        val: "15",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Total In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        val: "35",
+        grd_label: "Total In",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "SMS Response")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        val: "45",
+        grd_label: "SMS Response",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Email Response"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        val: "25",
+        grd_label: "Email Response",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex mobile-block"
@@ -39029,15 +39164,89 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "col m4 s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Player Statistic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Player Statistic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "player-stat"
-      }, "Total Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Played", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Player Login", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "98.53 % Offline Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "0 New Registered Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        label: "Total Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        percent_val: "30",
+        label: "Played",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        percent_val: "35",
+        label: "Player Login",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        percent_val: "50",
+        label: "Offline Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        percent_val: "90",
+        label: "New Registered Player ",
+        total: "341"
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m8 s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Top 10 Combination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "highlight responsive-table"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COMBINATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "GAME TYPE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COUNT BETS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL STRAIGHT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL RUMBLE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL BETS"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$3.76"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ToptenCombination__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        title: "Top 5 Combination",
+        header: [{
+          title: 'COMBINATION',
+          data: 'combi'
+        }, {
+          title: 'GAME TYPE',
+          data: 'type'
+        }, {
+          title: 'COUNT BETS',
+          data: 'countbets'
+        }, {
+          title: 'TOTAL STRAIGHT',
+          data: 'totalS'
+        }, {
+          title: 'TOTAL RUMBLE',
+          data: 'totalR'
+        }, {
+          title: 'TOTAL BETS',
+          data: 'totalB'
+        }],
+        data: [{
+          combi: '3-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '2-0-1',
+          type: 'Swer 2',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '1-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '8-0-1',
+          type: 'Swer 1',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '9-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }]
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "metronic-white-bg summary-grid"
@@ -41931,6 +42140,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/admin.css */ "./resources/css/admin.css");
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_admin_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_DataTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/DataTable */ "./resources/js/components/DataTable.js");
+/* harmony import */ var _components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/DashBoardBanner */ "./resources/js/components/DashBoardBanner.js");
+/* harmony import */ var _components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SummaryGrid */ "./resources/js/components/SummaryGrid.js");
+/* harmony import */ var _components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/PlayerStatBar */ "./resources/js/components/PlayerStatBar.js");
+/* harmony import */ var _components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/ToptenCombination */ "./resources/js/components/ToptenCombination.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41952,6 +42165,10 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
 
 
 
@@ -41984,53 +42201,49 @@ var AllDraw = /*#__PURE__*/function (_React$Component) {
         className: "row padding-all-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg dashboard-header"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "center-align"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "LIVE TRENDS ALL GAMES")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARCH 23, 2020 - 11AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CUTOFF TIME 10:50:00 AM - 11:30:00 AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Sat Apr 25 2020 5:29:57 PM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Straight")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "90",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "Rumble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "30",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Total"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "55",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Total In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "8",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "SMS Response")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "10",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Email Response"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "65",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex mobile-block"
@@ -42040,13 +42253,89 @@ var AllDraw = /*#__PURE__*/function (_React$Component) {
         className: "col s12 metronic-white-bg summary-grid push-height"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Player Statistic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "player-stat"
-      }, "Total Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Played", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Player Login", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "98.53 % Offline Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "0 New Registered Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "player-stat"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        label: "Total Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "30",
+        label: "Played",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "35",
+        label: "Player Login",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "50",
+        label: "Offline Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "90",
+        label: "New Registered Player ",
+        total: "341"
+      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m8 s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Top 10 Combination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "highlight responsive-table"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COMBINATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "GAME TYPE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COUNT BETS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL STRAIGHT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL RUMBLE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL BETS"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$3.76"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        title: "Top 5 Combination",
+        header: [{
+          title: 'COMBINATION',
+          data: 'combi'
+        }, {
+          title: 'GAME TYPE',
+          data: 'type'
+        }, {
+          title: 'COUNT BETS',
+          data: 'countbets'
+        }, {
+          title: 'TOTAL STRAIGHT',
+          data: 'totalS'
+        }, {
+          title: 'TOTAL RUMBLE',
+          data: 'totalR'
+        }, {
+          title: 'TOTAL BETS',
+          data: 'totalB'
+        }],
+        data: [{
+          combi: '3-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '2-0-1',
+          type: 'Swer 2',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '1-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '8-0-1',
+          type: 'Swer 1',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '9-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }]
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "metronic-white-bg summary-grid"
@@ -42077,6 +42366,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/admin.css */ "./resources/css/admin.css");
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_admin_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_DataTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/DataTable */ "./resources/js/components/DataTable.js");
+/* harmony import */ var _components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/DashBoardBanner */ "./resources/js/components/DashBoardBanner.js");
+/* harmony import */ var _components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SummaryGrid */ "./resources/js/components/SummaryGrid.js");
+/* harmony import */ var _components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/PlayerStatBar */ "./resources/js/components/PlayerStatBar.js");
+/* harmony import */ var _components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/ToptenCombination */ "./resources/js/components/ToptenCombination.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42105,6 +42398,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
+
+
 var BallDraw2 = /*#__PURE__*/function (_React$Component) {
   _inherits(BallDraw2, _React$Component);
 
@@ -42117,6 +42414,9 @@ var BallDraw2 = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(BallDraw2, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {}
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -42127,53 +42427,49 @@ var BallDraw2 = /*#__PURE__*/function (_React$Component) {
         className: "row padding-all-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg dashboard-header"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "center-align"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "LIVE TRENDS ALL GAMES")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARCH 23, 2020 - 11AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CUTOFF TIME 10:50:00 AM - 11:30:00 AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Sat Apr 25 2020 5:29:57 PM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Straight")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "90",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "Rumble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "30",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Total"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "55",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Total In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "8",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "SMS Response")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "10",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Email Response"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "65",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex mobile-block"
@@ -42183,13 +42479,89 @@ var BallDraw2 = /*#__PURE__*/function (_React$Component) {
         className: "col s12 metronic-white-bg summary-grid push-height"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Player Statistic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "player-stat"
-      }, "Total Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Played", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Player Login", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "98.53 % Offline Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "0 New Registered Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "player-stat"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        label: "Total Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "30",
+        label: "Played",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "35",
+        label: "Player Login",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "50",
+        label: "Offline Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "90",
+        label: "New Registered Player ",
+        total: "341"
+      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m8 s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Top 10 Combination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "highlight responsive-table"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COMBINATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "GAME TYPE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COUNT BETS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL STRAIGHT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL RUMBLE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL BETS"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$3.76"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        title: "Top 5 Combination",
+        header: [{
+          title: 'COMBINATION',
+          data: 'combi'
+        }, {
+          title: 'GAME TYPE',
+          data: 'type'
+        }, {
+          title: 'COUNT BETS',
+          data: 'countbets'
+        }, {
+          title: 'TOTAL STRAIGHT',
+          data: 'totalS'
+        }, {
+          title: 'TOTAL RUMBLE',
+          data: 'totalR'
+        }, {
+          title: 'TOTAL BETS',
+          data: 'totalB'
+        }],
+        data: [{
+          combi: '3-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '2-0-1',
+          type: 'Swer 2',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '1-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '8-0-1',
+          type: 'Swer 1',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '9-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }]
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "metronic-white-bg summary-grid"
@@ -42220,6 +42592,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/admin.css */ "./resources/css/admin.css");
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_admin_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_DataTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/DataTable */ "./resources/js/components/DataTable.js");
+/* harmony import */ var _components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/DashBoardBanner */ "./resources/js/components/DashBoardBanner.js");
+/* harmony import */ var _components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SummaryGrid */ "./resources/js/components/SummaryGrid.js");
+/* harmony import */ var _components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/PlayerStatBar */ "./resources/js/components/PlayerStatBar.js");
+/* harmony import */ var _components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/ToptenCombination */ "./resources/js/components/ToptenCombination.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42248,6 +42624,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
+
+
 var BallDraw3 = /*#__PURE__*/function (_React$Component) {
   _inherits(BallDraw3, _React$Component);
 
@@ -42260,6 +42640,9 @@ var BallDraw3 = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(BallDraw3, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {}
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -42270,53 +42653,49 @@ var BallDraw3 = /*#__PURE__*/function (_React$Component) {
         className: "row padding-all-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg dashboard-header"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "center-align"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "LIVE TRENDS ALL GAMES")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARCH 23, 2020 - 11AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CUTOFF TIME 10:50:00 AM - 11:30:00 AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Sat Apr 25 2020 5:29:57 PM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Straight")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "90",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "Rumble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "30",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Total"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "55",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Total In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "8",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "SMS Response")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "10",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Email Response"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "65",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex mobile-block"
@@ -42326,13 +42705,89 @@ var BallDraw3 = /*#__PURE__*/function (_React$Component) {
         className: "col s12 metronic-white-bg summary-grid push-height"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Player Statistic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "player-stat"
-      }, "Total Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Played", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Player Login", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "98.53 % Offline Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "0 New Registered Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "player-stat"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        label: "Total Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "30",
+        label: "Played",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "35",
+        label: "Player Login",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "50",
+        label: "Offline Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "90",
+        label: "New Registered Player ",
+        total: "341"
+      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m8 s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Top 10 Combination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "highlight responsive-table"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COMBINATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "GAME TYPE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COUNT BETS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL STRAIGHT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL RUMBLE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL BETS"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$3.76"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        title: "Top 5 Combination",
+        header: [{
+          title: 'COMBINATION',
+          data: 'combi'
+        }, {
+          title: 'GAME TYPE',
+          data: 'type'
+        }, {
+          title: 'COUNT BETS',
+          data: 'countbets'
+        }, {
+          title: 'TOTAL STRAIGHT',
+          data: 'totalS'
+        }, {
+          title: 'TOTAL RUMBLE',
+          data: 'totalR'
+        }, {
+          title: 'TOTAL BETS',
+          data: 'totalB'
+        }],
+        data: [{
+          combi: '3-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '2-0-1',
+          type: 'Swer 2',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '1-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '8-0-1',
+          type: 'Swer 1',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '9-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }]
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "metronic-white-bg summary-grid"
@@ -42363,6 +42818,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/admin.css */ "./resources/css/admin.css");
 /* harmony import */ var _css_admin_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_admin_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_DataTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/DataTable */ "./resources/js/components/DataTable.js");
+/* harmony import */ var _components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/DashBoardBanner */ "./resources/js/components/DashBoardBanner.js");
+/* harmony import */ var _components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SummaryGrid */ "./resources/js/components/SummaryGrid.js");
+/* harmony import */ var _components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/PlayerStatBar */ "./resources/js/components/PlayerStatBar.js");
+/* harmony import */ var _components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/ToptenCombination */ "./resources/js/components/ToptenCombination.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42391,6 +42850,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
+
+
 var Pares = /*#__PURE__*/function (_React$Component) {
   _inherits(Pares, _React$Component);
 
@@ -42403,6 +42866,9 @@ var Pares = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Pares, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {}
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -42413,53 +42879,49 @@ var Pares = /*#__PURE__*/function (_React$Component) {
         className: "row padding-all-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg dashboard-header"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "center-align"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "LIVE TRENDS ALL GAMES")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARCH 23, 2020 - 11AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CUTOFF TIME 10:50:00 AM - 11:30:00 AM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Sat Apr 25 2020 5:29:57 PM", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_DashBoardBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Straight")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "90",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "Rumble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "30",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Total"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "55",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line teal"
-      }), "Total In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "8",
+        grd_label: "Straight",
+        hr_color: "teal"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line red"
-      }), "SMS Response")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "10",
+        grd_label: "Rumble",
+        hr_color: "red"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s4 m-top-15"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "colx s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "30"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-        className: "summary-line yellow"
-      }), "Email Response"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SummaryGrid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        val: "65",
+        grd_label: "Total",
+        hr_color: "yellow"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex mobile-block"
@@ -42469,13 +42931,89 @@ var Pares = /*#__PURE__*/function (_React$Component) {
         className: "col s12 metronic-white-bg summary-grid push-height"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Player Statistic"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "player-stat"
-      }, "Total Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Played", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "1.17 % Player Login", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "98.53 % Offline Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), "0 New Registered Player", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "player-stat"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        label: "Total Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "30",
+        label: "Played",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "35",
+        label: "Player Login",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "50",
+        label: "Offline Player",
+        total: "341"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PlayerStatBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        percent_val: "90",
+        label: "New Registered Player ",
+        total: "341"
+      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m8 s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg summary-grid push-height"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Top 10 Combination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "highlight responsive-table"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COMBINATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "GAME TYPE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "COUNT BETS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL STRAIGHT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL RUMBLE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "TOTAL BETS"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alvin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Eclair"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Alan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jellybean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$3.76"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Jonathan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Lollipop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$7.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.87")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ToptenCombination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        title: "Top 5 Combination",
+        header: [{
+          title: 'COMBINATION',
+          data: 'combi'
+        }, {
+          title: 'GAME TYPE',
+          data: 'type'
+        }, {
+          title: 'COUNT BETS',
+          data: 'countbets'
+        }, {
+          title: 'TOTAL STRAIGHT',
+          data: 'totalS'
+        }, {
+          title: 'TOTAL RUMBLE',
+          data: 'totalR'
+        }, {
+          title: 'TOTAL BETS',
+          data: 'totalB'
+        }],
+        data: [{
+          combi: '3-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '2-0-1',
+          type: 'Swer 2',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '1-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '8-0-1',
+          type: 'Swer 1',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }, {
+          combi: '9-0-1',
+          type: 'Swer 3',
+          countbets: 100,
+          totalS: 40,
+          totalR: 80,
+          totalB: 900
+        }]
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "metronic-white-bg summary-grid"

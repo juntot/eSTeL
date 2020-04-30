@@ -4,6 +4,10 @@ import SideBar from '../layout/admin/SideBar'
 import '../../css/admin.css';
 import { Redirect } from 'react-router-dom';
 import DataTable from '../components/DataTable';
+import DashBoardBanner from '../components/DashBoardBanner';
+import SummaryGrid from '../components/SummaryGrid';
+import PlayerStatBar from '../components/PlayerStatBar';
+import TopTenCombination from '../components/ToptenCombination';
 
 
 class Home extends React.Component{
@@ -98,68 +102,34 @@ class Home extends React.Component{
                     <main>
                         <div className="row padding-all-15">
                             <div className="col s12">
-                                <div className="col s12 metronic-white-bg dashboard-header">
-                                    <div className="center-align">
-                                        <h5><b>LIVE TRENDS ALL GAMES</b></h5>
-                                        <p>
-                                            MARCH 23, 2020 - 11AM<br/>
-                                            CUTOFF TIME 10:50:00 AM - 11:30:00 AM<br/>
-                                            Sat Apr 25 2020 5:29:57 PM<br/>
-                                        </p>
-                                    </div>
-                                </div>
-                                
+                                <DashBoardBanner/>
                             </div>
                             <div className="clearfix"></div>
                             <div className="d-flex">
                                 <div className="col s4 m-top-15">
-                                    <div className="colx s12 metronic-white-bg summary-grid push-height">
-                                        <span>30</span>
-                                        <hr className="summary-line teal"/>
-                                        Straight
-                                    </div>
+                                    <SummaryGrid val="35" grd_label="Straight" hr_color="teal"/>
                                 </div>
                                         
                                 <div className="col s4 m-top-15">
-                                    <div className="colx s12 metronic-white-bg summary-grid push-height">
-                                        <span>30</span>
-                                        <hr className="summary-line red"/>
-                                        Rumble
-                                    </div>
+                                    <SummaryGrid val="40" grd_label="Rumble" hr_color="red" />
                                 </div>
                                         
                                 <div className="col s4 m-top-15">
-                                    <div className="colx s12 metronic-white-bg summary-grid push-height">
-                                        <span>30</span>
-                                        <hr className="summary-line yellow"/>
-                                        Total
-                                    </div>
+                                    <SummaryGrid val="15" grd_label="Total" hr_color="yellow"/>
                                 </div>
                             </div>
                             <div className="d-flex">
                                 {/* sencond row */}
                                 <div className="col s4 m-top-15">
-                                    <div className="colx s12 metronic-white-bg summary-grid push-height">
-                                        <span>30</span>
-                                        <hr className="summary-line teal"/>
-                                        Total In
-                                    </div>
+                                    <SummaryGrid val="35" grd_label="Total In" hr_color="teal"/>    
                                 </div>
                                         
                                 <div className="col s4 m-top-15">
-                                    <div className="colx s12 metronic-white-bg summary-grid push-height">
-                                        <span>30</span>
-                                        <hr className="summary-line red"/>
-                                        SMS Response
-                                    </div>
+                                    <SummaryGrid val="45" grd_label="SMS Response" hr_color="red"/>
                                 </div>
                                         
                                 <div className="col s4 m-top-15">
-                                    <div className="colx s12 metronic-white-bg summary-grid push-height">
-                                        <span>30</span>
-                                        <hr className="summary-line yellow"/>
-                                        Email Response
-                                    </div>
+                                    <SummaryGrid val="25" grd_label="Email Response" hr_color="yellow"/>
                                 </div>
                             </div>
                             
@@ -187,74 +157,37 @@ class Home extends React.Component{
                                 <div className="col m4 s12 m-top-15">
                                     <div className="col s12 metronic-white-bg summary-grid push-height">
                                         <p>Player Statistic</p>
+                                        <br/>
                                         <div className="player-stat">
-                                            Total Player
-                                            <span>
-                                                <span></span>
-                                            </span>
-                                            1.17 % Played
-                                            <span>
-                                                <span></span>
-                                            </span>
-                                            1.17 % Player Login
-                                            <span>
-                                                <span></span>
-                                            </span>
-                                            98.53 % Offline Player
-                                            <span>
-                                                <span></span>
-                                            </span>
-                                            0 New Registered Player
-                                            <span>
-                                                <span></span>
-                                            </span>
+                                            <PlayerStatBar label="Total Player" total="341"/>
+                                            <PlayerStatBar percent_val="30" label="Played" total="341"/>
+                                            <PlayerStatBar percent_val="35" label="Player Login" total="341"/>
+                                            <PlayerStatBar percent_val="50" label="Offline Player" total="341"/>
+                                            <PlayerStatBar percent_val="90" label="New Registered Player " total="341"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col m8 s12 m-top-15">
                                     <div className="col s12 metronic-white-bg summary-grid push-height">
-                                        <p>Top 10 Combination</p>
-                                        <div>
-                                            <table className="highlight responsive-table">
-                                                <thead>
-                                                <tr>
-                                                    <th>COMBINATION</th>
-                                                    <th>GAME TYPE</th>
-                                                    <th>COUNT BETS</th>
-                                                    <th>TOTAL STRAIGHT</th>
-                                                    <th>TOTAL RUMBLE</th>
-                                                    <th>TOTAL BETS</th>
-                                                </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                <tr>
-                                                    <td>Alvin</td>
-                                                    <td>Eclair</td>
-                                                    <td>$0.87</td>
-                                                    <td>$0.87</td>
-                                                    <td>$0.87</td>
-                                                    <td>$0.87</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Alan</td>
-                                                    <td>Jellybean</td>
-                                                    <td>$3.76</td>
-                                                    <td>$0.87</td>
-                                                    <td>$0.87</td>
-                                                    <td>$0.87</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jonathan</td>
-                                                    <td>Lollipop</td>
-                                                    <td>$7.00</td>
-                                                    <td>$0.87</td>
-                                                    <td>$0.87</td>
-                                                    <td>$0.87</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        <TopTenCombination title="Top 5 Combination" 
+                                            header={[
+                                                    {title: 'COMBINATION', data: 'combi'},
+                                                    {title: 'GAME TYPE', data: 'type'},
+                                                    {title: 'COUNT BETS', data: 'countbets'},
+                                                    {title: 'TOTAL STRAIGHT', data: 'totalS'},
+                                                    {title: 'TOTAL RUMBLE', data: 'totalR'},
+                                                    {title: 'TOTAL BETS', data: 'totalB'},
+                                                ]}
+                                            data={[
+                                                {combi: '3-0-1', type: 'Swer 3', countbets: 100, totalS: 40, totalR: 80, totalB: 900},
+                                                {combi: '2-0-1', type: 'Swer 2', countbets: 100, totalS: 40, totalR: 80, totalB: 900},
+                                                {combi: '1-0-1', type: 'Swer 3', countbets: 100, totalS: 40, totalR: 80, totalB: 900},
+                                                {combi: '8-0-1', type: 'Swer 1', countbets: 100, totalS: 40, totalR: 80, totalB: 900},
+                                                {combi: '9-0-1', type: 'Swer 3', countbets: 100, totalS: 40, totalR: 80, totalB: 900},
+                                                
+                                            ]}
+                                            
+                                        />
                                     </div>
                                 </div>
                             </div>

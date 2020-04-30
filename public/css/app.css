@@ -239,7 +239,7 @@ hr.summary-line.yellow{
 }
 
 .player-stat{
-    line-height: 64px;
+    line-height: 40px;
 }
 .player-stat span{
     display: block;
@@ -247,32 +247,34 @@ hr.summary-line.yellow{
     background: var(--mc-sidebar-color);
 }
 
+.player-stat div.bar-wrap{
+    margin-bottom: 13px;
+}
 
-
-.player-stat span:nth-child(5) span{
+.player-stat div.bar-wrap:nth-child(5) span span{
     background: var(--msc-navy);
-    width: 25%;
+    /* width: 25%; */
 }
 
-.player-stat span:nth-child(4) span{
+.player-stat div.bar-wrap:nth-child(4) span span{
     background: var(--mcs-red2);
-    width: 30%;
+    /* width: 30%; */
 }
 
-.player-stat span:nth-child(3) span{
+.player-stat div.bar-wrap:nth-child(3) span span{
     background: var(--mcs-yellow3);
-    width: 90%;
+    /* width: 90%; */
 }
 
-.player-stat span:nth-child(2) span{
+.player-stat div.bar-wrap:nth-child(2) span span{
     height: 3px;
-    width: 40%;
+    /* width: 40%; */
     background: var(--mcs-teal);
 }
 
-.player-stat span:nth-child(1) span{
+.player-stat div.bar-wrap:nth-child(1) span span{
     background: var(--mc-purple);
-    width: 100%;
+    /* width: 100%; */
 }
 /* END */
 

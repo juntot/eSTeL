@@ -95,8 +95,8 @@ const Nav = (props) =>{
                                 <label htmlFor="old_pass">Old Password</label>
                             </div>
                             <div className="input-field col s12">
-                                <input id="old_pass" type="text"/>
-                                <label htmlFor="old_pass">New Password</label>
+                                <input id="new_pass" type="text"/>
+                                <label htmlFor="new_pass">New Password</label>
                             </div>
                         </div>
                     </div>

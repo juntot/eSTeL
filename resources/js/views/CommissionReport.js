@@ -4,6 +4,19 @@ import SideBar from '../layout/admin/SideBar';
 
 class CommissionReport extends React.Component {
     componentDidMount() {
+
+
+        let elems = document.querySelectorAll('.datepicker');
+        let instances = M.Datepicker.init(elems, {
+            defaultDate: new Date(),
+            setDefaultDate: true
+        });
+
+        elems = document.querySelectorAll('.modal');
+        M.Modal.init(elems);
+
+
+
         // DT
         var dataSet = [
             {name: 'JOhn DOe', position: 'IT', salary: '1000', aw: 'JOhn sdfsfsf', aws: 'ITsdfsfsfsfooofjfsf', awss: '1000'},
@@ -94,11 +107,27 @@ class CommissionReport extends React.Component {
                     <main>
                         <div className="row padding-all-15 padding-top-0">
                             <div className="col s12">
+
+                                <div className="col s12 metronic-white-bg m-top-15">
+                                    <div className="padding-bottom-defaultx">
+                                        <div className="input-field">
+                                            <button className="btn waves-effect waves-light modal-trigger" data-target="modal1"  type="submit" name="action">
+                                                Claim Commission
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="col s12 metronic-white-bg m-top-15">
                                     <p>Report type</p>
+                                    {/* <div className="col s12">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Submit
+                                        </button>
+                                    </div> */}
+                                    
                                     <div className="col m4 s12 m-tb-15">
                                         <label>
-                                            <input className="with-gap" name="group3" type="radio" checked/>
+                                            <input className="with-gap" name="group3" type="radio"/>
                                             <span>Claimed Commission Report</span>
                                         </label>
                                     </div>
@@ -117,11 +146,12 @@ class CommissionReport extends React.Component {
                                         <label>Date to</label> 
                                     </div>
                                     <div className="col m4">
-                                        <div className="input-field col s2">
+                                        <div className="input-field">
                                             <button className="btn waves-effect waves-light" type="submit" name="action">
                                                 Load Report
-                                                <i className="material-icons right">send</i>
+                                                {/* <i className="material-icons right">send</i> */}
                                             </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +159,7 @@ class CommissionReport extends React.Component {
                                 <div className="col s12 metronic-white-bg m-top-15">
                                     <p>Data Result</p>
                                     
-
+                                    
                                     <table id="example" className="display" ></table>
                                     <p> 
                                         Total  Selected Date Commission:
@@ -143,6 +173,53 @@ class CommissionReport extends React.Component {
                             </div>
                         </div>
                     </main>
+
+
+                    {/* <!-- Modal Structure --> */}
+                    <div id="modal1" className="modal modal-fixed-footer commission-report">
+                        <div className="modal-content">
+                            <div className="row">
+                                <div className="col s12">
+                                    <div className="input-field col l9 m9 s12">
+                                        <input id="accntnum" type="text" className="validate" />
+                                        <label htmlFor="accntnum">Accnt #</label>
+                                    </div>
+                                    <div className="input-field col l3 m3 s12 right-align">
+                                        <button className="btn waves-effect waves-light full-width" type="submit" name="action">
+                                            Search
+                                            <i className="material-icons left">search</i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="col s12">
+                                    <div className="input-field col s12">
+                                        <input id="fullname" type="text" className="validate" />
+                                        <label htmlFor="fullname">Full Name</label>
+                                    </div>
+                                </div>
+                                <div className="col s12">
+                                    <div className="input-field col s12">
+                                        <input id="comm-balance" type="text" className="validate" />
+                                        <label htmlFor="comm-balance">Commission Balance</label>
+                                    </div>
+                                </div>
+                                <div className="col s12">
+                                    <div className="input-field col s12">
+                                        <input id="amnt-claim" type="text" className="validate" />
+                                        <label htmlFor="amnt-claim">Amount to Claim</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div className="modal-footer">
+                            <div className="col s12">
+                                <button className="btn waves-effect waves-light" type="submit" name="action">
+                                    Claim Commission
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
          );

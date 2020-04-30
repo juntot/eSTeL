@@ -109,7 +109,7 @@ class PowerAppReport extends React.Component {
                                         <input type="text" className="datepicker"/>
                                     </div>
                                     <div className="col m6 s12">
-                                        <div className="input-field col s12">
+                                        <div className="input-field s12">
                                             <a className="waves-effect waves-light btn">
                                                 <i className="material-icons left">cloud_upload</i>Save
                                             </a>

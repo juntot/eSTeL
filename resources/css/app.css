@@ -1,3 +1,7 @@
+.full-width{
+    width: 100%;
+}
+
 .hidden{
     display: none
 }
@@ -19,7 +23,10 @@
 .padding-all-rem-15{
     padding: .75rem !important;
 }
-
+.padding-left-15
+{
+    padding-left: 15px;
+}
 .m-top-15{
     margin-top: 15px;
 }
@@ -320,6 +327,31 @@ hr.summary-line.yellow{
 #modal2.modal-game-profile{
     max-height: 211px;
 }
+
+
+/* Commission Report */
+
+#modal1.commission-report{
+    max-width: 640px;
+    max-height: 463px;   
+}
+/* end */
+
+
+
+/* Remittance Report */
+#modal1.remittance-report{
+     max-width: 495px;
+}
+
+.remittance-logo{
+    width: 100%;
+    height: auto;
+}
+
+/* end */
+
+
 
 /* DATATABLE */
 

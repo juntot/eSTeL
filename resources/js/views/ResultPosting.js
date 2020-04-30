@@ -151,6 +151,8 @@ class ResultPosting extends React.Component{
                                     <p>
                                         <a className="waves-effect waves-light btn modal-trigger" href="#modal-res-posting">Add Posting</a>
                                     </p>
+                                </div>
+                                <div className="col s12 metronic-white-bg m-top-15">
                                     <br/>
                                     {/* <div className="d-flex mobile-block res-posting"> */}
                                         <div className="input-field col m4 s12 m-select-option">

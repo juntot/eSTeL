@@ -37915,7 +37915,14 @@ var CommissionReport = /*#__PURE__*/function (_React$Component) {
   _createClass(CommissionReport, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // DT
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, {
+        defaultDate: new Date(),
+        setDefaultDate: true
+      });
+      elems = document.querySelectorAll('.modal');
+      M.Modal.init(elems); // DT
+
       var dataSet = [{
         name: 'JOhn DOe',
         position: 'IT',
@@ -38089,13 +38096,23 @@ var CommissionReport = /*#__PURE__*/function (_React$Component) {
         className: "col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "padding-bottom-defaultx"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light modal-trigger",
+        "data-target": "modal1",
+        type: "submit",
+        name: "action"
+      }, "Claim Commission")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Report type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m4 s12 m-tb-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "with-gap",
         name: "group3",
-        type: "radio",
-        checked: true
+        type: "radio"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Claimed Commission Report"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m8 s12 m-tb-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -38115,19 +38132,80 @@ var CommissionReport = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date to")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
+        className: "input-field"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn waves-effect waves-light",
         type: "submit",
         name: "action"
-      }, "Load Report", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "material-icons right"
-      }, "send"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Load Report")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Data Result"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         id: "example",
         className: "display"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total  Selected Date Commission:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total Commission Balance")))))));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total  Selected Date Commission:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total Commission Balance"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "modal1",
+        className: "modal modal-fixed-footer commission-report"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col l9 m9 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "accntnum",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "accntnum"
+      }, "Accnt #")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col l3 m3 s12 right-align"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light full-width",
+        type: "submit",
+        name: "action"
+      }, "Search", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "material-icons left"
+      }, "search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "fullname",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "fullname"
+      }, "Full Name"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "comm-balance",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "comm-balance"
+      }, "Commission Balance"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "amnt-claim",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "amnt-claim"
+      }, "Amount to Claim"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-footer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light",
+        type: "submit",
+        name: "action"
+      }, "Claim Commission"))))));
     }
   }]);
 
@@ -39028,7 +39106,7 @@ var LiveStream = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
+        className: "input-field col xl10 l9 m9 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         id: "YtURL",
         type: "text",
@@ -39037,7 +39115,7 @@ var LiveStream = /*#__PURE__*/function (_React$Component) {
         className: "active",
         htmlFor: "YtURL"
       }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
+        className: "input-field col xl2 l3 m3 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "waves-effect waves-light btn"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -39679,7 +39757,7 @@ var PowerAppReport = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m6 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s12"
+        className: "input-field s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "waves-effect waves-light btn"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -39740,6 +39818,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+var $ = window.$;
 
 var RemittanceReport = /*#__PURE__*/function (_React$Component) {
   _inherits(RemittanceReport, _React$Component);
@@ -39753,6 +39832,238 @@ var RemittanceReport = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(RemittanceReport, [{
+    key: "handelChangeImg",
+    value: function handelChangeImg(e) {// this.readURL(e);
+    }
+  }, {
+    key: "readURL",
+    value: function readURL(input) {
+      // console.log(input);
+      // return;
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('#blah').attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]); // convert to base64 string
+      }
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var self = this;
+      $("#imgInp").change(function () {
+        self.readURL(this);
+      });
+      var elems = document.querySelectorAll('.modal');
+      M.Modal.init(elems);
+      elems = document.querySelectorAll('select');
+      M.FormSelect.init(elems); // DT
+
+      var dataSet = [{
+        name: 'JOhn DOe',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe1',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe2',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe3',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe4',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe5',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe6',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe7',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe8',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe9',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe10',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe11',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe12',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }, {
+        name: 'JOhn DOe13',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf',
+        awss: '1000'
+      }];
+      var columnDefs = [{
+        title: "Name",
+        data: 'name'
+      }, {
+        title: "Position",
+        data: 'position'
+      }, {
+        title: "Salary",
+        data: 'salary'
+      }, {
+        title: "aw",
+        data: 'aw'
+      }, {
+        title: "aws",
+        data: 'aws'
+      }, {
+        title: "awss",
+        data: 'awss'
+      }];
+      $('#example').DataTable({
+        data: dataSet,
+        columns: columnDefs,
+        buttons: [//  {
+        //     text: '<i class="fa fa-lg fa-file-text-o"></i>',
+        //     extend: 'csv',
+        //     className: 'btn btn-xs btn-primary p-5 m-0 width-35 assets-export-btn export-csv ttip',
+        //     title: 'export_filename',
+        //     extension: '.csv'
+        // }, 
+        {
+          text: "<a class=\"white-text\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\" viewBox=\"0 0 26 26\" width=\"26px\" height=\"26px\" style=\"&#10;    height: 21px;&#10;\"><path d=\"M 15 0 L 0 2.875 L 0 23.125 L 15 26 Z M 16 3 L 16 5.96875 L 19.03125 5.96875 L 19.03125 8 L 16 8 L 16 10 L 19 10 L 19 12 L 16 12 L 16 14 L 19 14 L 19 16 L 16 16 L 16 18 L 19 18 L 19 20 L 16 20 L 16 23 L 25.15625 23 C 25.617188 23 26 22.605469 26 22.125 L 26 3.875 C 26 3.394531 25.617188 3 25.15625 3 Z M 20 6 L 24 6 L 24 8 L 20 8 Z M 3.09375 7.9375 L 5.84375 7.9375 L 7.3125 11 C 7.425781 11.238281 7.535156 11.515625 7.625 11.84375 C 7.683594 11.644531 7.8125 11.359375 7.96875 10.96875 L 9.5625 7.9375 L 12.09375 7.9375 L 9.0625 12.96875 L 12.1875 18.09375 L 9.5 18.09375 L 7.75 14.78125 C 7.683594 14.660156 7.601563 14.421875 7.53125 14.09375 L 7.5 14.09375 C 7.46875 14.25 7.402344 14.496094 7.28125 14.8125 L 5.53125 18.09375 L 2.8125 18.09375 L 6.03125 13.03125 Z M 20 10 L 24 10 L 24 12 L 20 12 Z M 20 14 L 24 14 L 24 16 L 20 16 Z M 20 18 L 24 18 L 24 20 L 20 20 Z\" style=\"&#10;    fill: white;&#10;\"/></svg>\n                    Excel</a>",
+          extend: 'excel',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          filename: 'aws',
+          // title: 'export_filename',
+          extension: '.xls'
+        }, {
+          text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+          extend: 'print',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          title: '' // exportOptions: {
+          //     rows: function ( idx, data, node ) {
+          //       var dt = new $.fn.dataTable.Api('#example' );
+          //       var selected = dt.rows( { selected: true } ).indexes().toArray();
+          //       if( selected.length === 0 || $.inArray(idx, selected) !== -1)
+          //         return true;
+          //       return false;
+          //   }
+          // }
+
+        }],
+
+        /*  // buttons: [
+         //     {
+         //         text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+         //         extend: 'print',
+         //         className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+         //         title: '',
+         //         exportOptions: {
+         //             rows: function ( idx, data, node ) {
+         //               var dt = new $.fn.dataTable.Api('#example' );
+         //               var selected = dt.rows( { selected: true } ).indexes().toArray();
+                      
+         //               if( selected.length === 0 || $.inArray(idx, selected) !== -1)
+         //                 return true;
+                 
+                 //               return false;
+         //           }
+         //         }
+         //     }
+         //     // ,{
+         //     //     text: '<a class="white-text"><i class="material-icons left">print</i>Excel</a>',
+         //     //     extend: '',
+         //     //     className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+         //     // }
+         // ], */
+        // select: {
+        //     style: 'multi',
+        //     selector: 'td',
+        // },
+        "pagingType": "simple",
+        language: {
+          search: '',
+          searchPlaceholder: "Search records",
+          paginate: {
+            next: '<i class="material-icons">keyboard_arrow_right</i>',
+            // or '→'
+            previous: '<i class="material-icons">keyboard_arrow_left</i>' // or '←' 
+
+          },
+          lengthMenu: "Display _MENU_ records per page",
+          zeroRecords: "Nothing found - sorry",
+          // info: "_START_ _PAGE_ of _PAGES_",
+          info: "_START_ - _END_ of _TOTAL_",
+          infoEmpty: "No records available",
+          infoFiltered: "(filtered from _MAX_ total records)"
+        },
+        "dom": '<"top"f<"right-align m-top-15" B>>rt<"row bottom"<"col s6"i><"col s6 right-align"p>><"clear">',
+        "scrollX": true,
+        order: [[1, 'asc']]
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -39760,35 +40071,118 @@ var RemittanceReport = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "Remittance Report"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row padding-all-15 padding-top-0 m-top-15"
+        className: "row padding-all-15 padding-top-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light modal-trigger",
+        "data-target": "modal1",
+        type: "submit",
+        name: "action"
+      }, "Add New Remittance"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        id: "example",
+        className: "display"
+      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "modal1",
+        className: "modal modal-fixed-footer remittance-report"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "remittance-logo-wrap"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "imgInp"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        id: "blah",
+        src: "public/imgs/stl-remittance-default-logo.png",
+        alt: "",
+        className: "remittance-logo"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "hidden",
+        type: "file",
+        id: "imgInp",
+        onChange: this.handelChangeImg.bind(this)
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "colx s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "YtURL",
+        id: "remittanceID",
         type: "text",
         className: "validate"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "active",
-        htmlFor: "YtURL"
-      }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "waves-effect waves-light btn"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "material-icons left"
-      }, "cloud_upload"), "Save"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "PreviewYt",
-        className: "col s12 metronic-white-bg m-top-15 display-none hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "iframeYt",
-        className: "padding-bottom-default"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        src: "",
-        frameBorder: "0",
-        allowFullScreen: true
-      })))))));
+        htmlFor: "remittanceID"
+      }, "Remittance ID"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "colx s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "logoname",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "logoname"
+      }, "Logo Filename"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "remittance-code",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "remittance-code"
+      }, "Remittance Code"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "descrip",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "descrip"
+      }, "Description"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-select-option input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "",
+        disabled: true
+      }, "Choose your option"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "1"
+      }, "Option 1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "2"
+      }, "Option 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "3"
+      }, "Option 3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Materialize Select"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "terms",
+        type: "text",
+        className: "validate"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "terms"
+      }, "Terms & Conditions"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-footer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light",
+        type: "submit",
+        name: "action"
+      }, "Save"))))));
     }
   }]);
 
@@ -40068,7 +40462,9 @@ var ResultPosting = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "waves-effect waves-light btn modal-trigger",
         href: "#modal-res-posting"
-      }, "Add Posting")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Add Posting"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col m4 s12 m-select-option"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "",
@@ -40933,42 +41329,240 @@ var WinningClaimedReport = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(WinningClaimedReport, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, {
+        defaultDate: new Date(),
+        setDefaultDate: true
+      });
+      elems = document.querySelectorAll('select');
+      M.FormSelect.init(elems); // DT
+
+      var dataSet = [{
+        name: 'JOhn DOe',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe1',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe2',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe3',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe4',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe5',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe6',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe7',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe8',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe9',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe10',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe11',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe12',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }, {
+        name: 'JOhn DOe13',
+        position: 'IT',
+        salary: '1000',
+        aw: 'JOhn sdfsfsf',
+        aws: 'ITsdfsfsfsfooofjfsf'
+      }];
+      var columnDefs = [{
+        title: "Req ID",
+        data: 'name'
+      }, {
+        title: "Accnt #",
+        data: 'position'
+      }, {
+        title: "Req Date",
+        data: 'salary'
+      }, {
+        title: "Trans #",
+        data: 'aw'
+      }, {
+        title: "Total Amt",
+        data: 'aws'
+      }, {
+        title: "Encashment type",
+        data: 'aws'
+      }, {
+        title: "Remittance Name",
+        data: 'aws'
+      }, {
+        title: "Address",
+        data: 'aws'
+      }, {
+        title: "Confirmed",
+        data: 'aws'
+      }];
+      $('#example').DataTable({
+        data: dataSet,
+        columns: columnDefs,
+        buttons: [{
+          text: '<a class="white-text"><i class="material-icons left">print</i>Print</a>',
+          extend: 'print',
+          className: 'btn btn-primary btn-sm m-5 width-140 assets-select-btn export-print',
+          title: '' // exportOptions: {
+          //     rows: function ( idx, data, node ) {
+          //       var dt = new $.fn.dataTable.Api('#example' );
+          //       var selected = dt.rows( { selected: true } ).indexes().toArray();
+          //       if( selected.length === 0 || $.inArray(idx, selected) !== -1)
+          //         return true;
+          //       return false;
+          //   }
+          // }
+
+        }],
+        // select: {
+        //     style: 'multi',
+        //     selector: 'td',
+        // },
+        "pagingType": "simple",
+        language: {
+          search: '',
+          searchPlaceholder: "Search records",
+          paginate: {
+            next: '<i class="material-icons">keyboard_arrow_right</i>',
+            // or '→'
+            previous: '<i class="material-icons">keyboard_arrow_left</i>' // or '←' 
+
+          },
+          lengthMenu: "Display _MENU_ records per page",
+          zeroRecords: "Nothing found - sorry",
+          // info: "_START_ _PAGE_ of _PAGES_",
+          info: "_START_ - _END_ of _TOTAL_",
+          infoEmpty: "No records available",
+          infoFiltered: "(filtered from _MAX_ total records)"
+        },
+        "dom": '<"top"f<"right-align m-top-15" B>>rt<"row bottom"<"col s6"i><"col s6 right-align"p>><"clear">',
+        "scrollX": true,
+        order: [[1, 'asc']]
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "App"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        title: "Winning Claimed Report"
+        title: "Winninging Claimed Report"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_admin_SideBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row padding-all-15 padding-top-0 m-top-15"
+        className: "row padding-all-15 padding-top-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col s12 metronic-white-bg"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Live Stream"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s10"
+        className: "col s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12 m-tb-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "input-field"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "YtURL",
+        className: "with-gap",
+        name: "group3",
+        type: "radio"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Claimed Commission Report"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12 m-tb-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "with-gap",
+        name: "group3",
+        type: "radio"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Claimed Commission Report"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col m4 s12 m-tb-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "input-field"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "with-gap",
+        name: "group3",
+        type: "radio"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Claimed Commission Report")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Date Range"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker input-field col m4 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "validate"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "active",
-        htmlFor: "YtURL"
-      }, "Youtube Url")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col s2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "waves-effect waves-light btn"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "datepicker"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date from")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker input-field col m4 s12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "datepicker"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date to")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-field col m2 s12 left-align"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn waves-effect waves-light",
+        type: "submit",
+        name: "action"
+      }, "Load", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "material-icons left"
-      }, "cloud_upload"), "Save"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "PreviewYt",
-        className: "col s12 metronic-white-bg m-top-15 display-none hidden"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "iframeYt",
-        className: "padding-bottom-default"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        src: "",
-        frameBorder: "0",
-        allowFullScreen: true
-      })))))));
+      }, "cloud_download")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col s12 metronic-white-bg m-top-15"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Data Result"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        id: "example",
+        className: "display"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-tb-15 col m4 s12 padding-left-0"
+      }, "Total Amount:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "clearfix"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))))));
     }
   }]);
 
@@ -41208,20 +41802,16 @@ var WinningReport = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s12 metronic-white-bg m-top-15"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Date Range"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col m3 s12 m-select-option"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "m-date-picker"
+        className: "m-date-picker input-field col m3 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "datepicker"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-field col m3 s12 m-select-option"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "m-date-picker"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date from")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "m-date-picker input-field col m3 s12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "datepicker"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Date to")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field col m3 s12 m-select-option"

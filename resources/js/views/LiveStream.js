@@ -41,11 +41,11 @@ class LiveStream extends React.Component{
                                 <p>
                                     Live Stream
                                 </p>
-                                <div className="input-field col s10" >
+                                <div className="input-field col xl10 l9 m9 s12" >
                                     <input id="YtURL" type="text" className="validate" />
                                     <label className="active" htmlFor="YtURL">Youtube Url</label>
                                 </div>
-                                <div className="input-field col s2">
+                                <div className="input-field col xl2 l3 m3 s12">
                                     <a className="waves-effect waves-light btn">
                                         <i className="material-icons left">cloud_upload</i>
                                         Save</a>

@@ -114,15 +114,13 @@ class WinningReport extends React.Component {
                                 <div className="col s12 metronic-white-bg m-top-15">
                                     <p>Date Range</p>
                                   
-                                        <div className="input-field col m3 s12 m-select-option">
-                                            <div className="m-date-picker">
-                                                <input type="text" className="datepicker"/>
-                                            </div>
+                                        <div className="m-date-picker input-field col m3 s12">
+                                            <input type="text" className="datepicker" />
+                                            <label>Date from</label> 
                                         </div>
-                                        <div className="input-field col m3 s12 m-select-option">
-                                            <div className="m-date-picker">
-                                                <input type="text" className="datepicker"/>
-                                            </div>
+                                        <div className="m-date-picker input-field col m3 s12">
+                                            <input type="text" className="datepicker" />
+                                            <label>Date to</label> 
                                         </div>
                                         <div className="clearfix"></div>
                                   
@@ -163,10 +161,11 @@ class WinningReport extends React.Component {
                                             </select>
                                             <label>Operator</label>
                                         </div>
+                                        
                                         <div className="input-field col padding-sides-0 m2 s12 right-align">
-                                            <button className="btn waves-effect waves-light" type="submit" name="action">Load
-                                                <i className="material-icons left">cloud_download</i>
-                                            </button>                            
+                                                <button className="btn waves-effect waves-light" type="submit" name="action">Load
+                                                    <i className="material-icons left">cloud_download</i>
+                                                </button>                            
                                         </div>
                                     
                                 </div>

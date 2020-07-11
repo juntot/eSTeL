@@ -50,8 +50,9 @@ Route::get('/api/get_branch', 'BranchController@getBranch');
 
 
 // V1
+// url/compid/branchcode/gametype/sessionid
 
-Route::get('/{dbnamex?}/{gameid?}/{key?}', function () {
+Route::get('/{dbname?}/{gameid?}/{key?}', function () {
     return view('welcome');
 });
 

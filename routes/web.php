@@ -52,17 +52,17 @@ Route::get('/api/get_branch', 'BranchController@getBranch');
 // V1
 // url/compid/branchcode/gametype/sessionid
 
-Route::get('/{dbname?}/{gameid?}/{key?}', function () {
+Route::get('/{compid?}/{branchode?}/{gameid?}/{key?}', function () {
     return view('welcome');
 });
 
 
-Route::get('/{dbname?}/{gameid?}/api/get_session/{session_id?}', 'HomeController@getSession');
+Route::get('/{compid?}/{branchcode?}/{gameid?}/api/get_session/{session_id?}', 'HomeController@getSession');
 
-Route::get('/{dbname?}/{any?}/api/summary_grid/{draw_date?}', 'HomeController@getSummaryGrid');
-Route::get('/{dbname?}/{any?}/api/top_combi/{date?}/{gametype?}/{drawtime?}', 'HomeController@getTopCombi');
+Route::get('/{compid?}/{any?}/api/summary_grid/{draw_date?}', 'HomeController@getSummaryGrid');
+Route::get('/{compid?}/{any?}/api/top_combi/{date?}/{gametype?}/{drawtime?}', 'HomeController@getTopCombi');
 
-Route::get('/{dbname?}/{any?}/api/get_cutoff/{gameid?}', 'HomeController@getCutOFf');
-Route::get('/{dbname?}/{any?}/api/player_stat/{gameid?}', 'HomeController@playerStat');
+Route::get('/{compid?}/{any?}/api/get_cutoff/{gameid?}', 'HomeController@getCutOFf');
+Route::get('/{compid?}/{any?}/api/player_stat/{gameid?}', 'HomeController@playerStat');
 
-Route::get('/{dbname?}/{any?}/api/current_trans/{gameid?}', 'HomeController@currentTransaction');
+Route::get('/{compid?}/{any?}/api/current_trans/{gameid?}', 'HomeController@currentTransaction');

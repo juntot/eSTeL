@@ -5,7 +5,7 @@ const SummaryGrid2 = (props) => {
         <div className="colx s12 metronic-white-bg summary-grid push-height no-padding">
             <div className="col s12 summary-grd-2">{props.grd_label || ''}</div>
             <div className="summary-grd-text-content center-align">
-                <span>{new Intl.NumberFormat().format(props.val) || '0'}</span>
+                <span>{props.val || '0'}</span>
             </div>
             
         </div>

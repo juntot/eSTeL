@@ -141,7 +141,7 @@ const GenCoorForm = forwardRef((props, ref) => {
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
-                                <input id="gencoor_comm" type="text" className="validate" />
+                                <input id="gencoor_comm" type="text" className="validate" name="commission"/>
                                 <label htmlFor="gencoor_comm">Commission</label>
                                 
                             </div>

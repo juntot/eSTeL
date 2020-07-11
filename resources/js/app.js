@@ -1,69 +1,78 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+  withRouter,
+  useLocation
 } from "react-router-dom";
-import Home from './views/Home';
-import Login from './views/Login';
-import Employee from './views/Employee';
-import Location from './views/Location';
+
 import {ProtectedRoute} from './protected_route';
 import {PageNotFound} from './views/PageNotFound';
-import GameProfile from "./views/GameProfile";;
-import ResultPosting from "./views/ResultPosting";
-import LiveStream from "./views/LiveStream";
-import TextBlast from "./views/TextBlast";
-import BallDraw3 from "./views/sub-views/BallDraw3";
-import Pares from "./views/sub-views/Pares";
-import BallDraw2 from "./views/sub-views/BallDraw2";
-import AllDraw from "./views/sub-views/AllDraw";
-import PowerAppReport from "./views/PowerAppReport";
-import WinningReport from "./views/WinningReport";
-import CommissionReport from "./views/CommissionReport";
-import RemittanceReport from "./views/RemittanceReport";
-import WinningClaimedReport from "./views/WinningClaimedReport";
-import UserAccount from "./views/UserAccount";
-import SearchAccount from "./views/SearchAccount";
 import LiveTrends from "./views/LiveTrends";
+import LiveTrendsSwer2 from "./views/LiveTrendsSwer2";
+import LivetrendsPares from "./views/LiveTrendsPares";
+import LivetrendsAll from "./views/LiveTrendsAll";
+import Axios from "axios";
+import '../css/Loader.css';  
+// import '../../resources'
+import '../css/datatablehelper.css'
+import '../css/admin.css';
+import '../css/LiveTrends.css'
 
-function App() {
-  return (
+function App(props) {
+  let location = useLocation();
+  
+  // const [defaultPath, setDefaultPath] = useState(location.pathname);
+  const[isValid, setIsValid] = useState(false);
+  useEffect(() => {
+        document.body.classList.add('loader');
+        let session_id = (location.pathname).split('/');
+        session_id = session_id[session_id.length-1];
+
+        Axios.get('api/get_session/'+session_id)
+        .then(res=>{
+            if(res.data.length > 0){
+              if(res.data[0].session)
+              document.body.classList.remove('loader');
+              setIsValid(res.data[0].session);
+            }
+              
+        })
+        .catch(err=>console.log(err));
+      
     
+  }, []);
+  if(!isValid){
+    return(
+      <div className="center-align padding-all-15 vh-100">
+          <div id="container" className="loader">
+            <div className="divider loader" aria-hidden="true"></div>
+            <p className="loading-text loader" aria-label="Loading">
+              <span className="letter loader" aria-hidden="true">L</span>
+              <span className="letter loader" aria-hidden="true">o</span>
+              <span className="letter loader" aria-hidden="true">a</span>
+              <span className="letter loader" aria-hidden="true">d</span>
+              <span className="letter loader" aria-hidden="true">i</span>
+              <span className="letter loader" aria-hidden="true">n</span>
+              <span className="letter loader" aria-hidden="true">g</span>
+            </p>
+          </div>
+      </div>
+    )
+  }else{
+
+  
+  return (
     // <Router basename="/stl">
-    <Router basename="/stl">
+    <Router basename="/livetrends">
         <div>
         <Switch>
-          <Route path="/login" component={Login} />
-          
-          <Route exact path="/" component={LiveTrends} />
-          {/* <ProtectedRoute exact path="/" component={Home} /> */}
-          
-          {/* operation */}
-          {/* <ProtectedRoute path="/game-profile" component={GameProfile} />
-          <ProtectedRoute path="/result-posting" component={ResultPosting} />
-          <ProtectedRoute path="/employee" component={Employee} />
-          <ProtectedRoute path="/livestream" component={LiveStream} />
-          <ProtectedRoute path="/text-blast" component={TextBlast} />
-          <ProtectedRoute path="/pares" component={Pares} />
-          <ProtectedRoute path="/ball2" component={BallDraw2} />
-          <ProtectedRoute path="/ball3" component={BallDraw3} />
-          <ProtectedRoute path="/all-draw" component={AllDraw} /> */}
-
-          {/* accounting */}
-          {/* <ProtectedRoute path="/power-app" component={PowerAppReport} />
-          <ProtectedRoute path="/winning-report" component={WinningReport} /> */}
-          
-          {/* treasury */}
-          {/* <ProtectedRoute path="/commission-report" component={CommissionReport} />
-          <ProtectedRoute path="/remittance-report" component={RemittanceReport} />
-          <ProtectedRoute path="/winning-claimed-report" component={WinningClaimedReport} /> */}
-
-          {/* account */}
-          {/* <Route path="/user-account" component={UserAccount} />
-          <Route path="/search-account" component={SearchAccount} /> */}
-          {/* <ProtectedRoute path="/user-account" component={UserAccount} />
-          <ProtectedRoute path="/search-account" component={SearchAccount} /> */}
+          <Route exact path="/:db/swer3/:session_id" component={LiveTrends} />
+          {/* <Route exact path="/swer3/:session_id" render={(props) => <LiveTrends {...props} securitykey={'sekey'} />}/> */}
+          <Route exact path="/:db/swer2/:session_id" component={LiveTrendsSwer2} / >
+          <Route exact path="/:db/pares/:session_id" component={LivetrendsPares} / >
+          <Route exact path="/:db/all/:session_id" component={LivetrendsAll} / >
 
           {/* <Route path="/location" component={Location} /> */}
           <Route path="*" component={PageNotFound} />
@@ -71,6 +80,9 @@ function App() {
       </div>
     </Router>
   );
+
+
+  }
 }
 
-export default App;
+export default withRouter(App);

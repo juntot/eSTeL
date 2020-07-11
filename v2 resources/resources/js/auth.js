@@ -42,17 +42,17 @@ class Auth{
          }
     }
     login(obj, cb){
-        const encrType =  this.encrypt(obj.USR_TYP);
+        const encrType =  this.encrypt(obj.Usertype);
         // const ecrCompId = this.encrypt(obj.COMP_ID);
         // const encrBrcd = this.encrypt()
        
-        this.userType = obj.USR_TYP;
-        this.compid = obj.COMP_ID;
-        this.brcd = obj.BR_CD;
-        this.userid = obj.CUST_ID;
+        this.userType = obj.Usertype;
+        this.compid = obj.CompanyID;
+        this.brcd = obj.BranchCode;
+        this.userid = obj.CustID;
 
-        localStorage.setItem('user', obj.USR_FRST_NM);
-        localStorage.setItem('fullname', obj.USR_FLLNME);
+        localStorage.setItem('user', obj.FirstName);
+        localStorage.setItem('fullname', obj.FullName);
         localStorage.setItem('type', encrType);
         localStorage.setItem('compid',this.compid );
         localStorage.setItem('brcd',this.brcd );

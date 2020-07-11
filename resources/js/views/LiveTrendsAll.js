@@ -4,27 +4,22 @@ import DataTable from '../components/DataTable';
 import DashBoardBanner from '../components/DashBoardBanner';
 import SummaryGrid2 from '../components/SummaryGrid2';
 import PlayerStatBar from '../components/PlayerStatBar';
-import GameType from '../components/GameType';
 import Axios from 'axios';
+import GameType from '../components/GameType';
 import { sound } from '../components/Audio';
 
 const moment = window.moment.tz.setDefault('Asia/Manila');
-
-
 
 
 const CancelToken = Axios.CancelToken;
 let cancel = '';
 let _interval = '';
 
-// const Howl = window.Howl;
 
-class LiveTrends extends React.Component{
-
+class LiveTrendsAll extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            isValid: false,
             summary_grid: {
                 straight  : '',
                 rumble    : '',
@@ -40,18 +35,17 @@ class LiveTrends extends React.Component{
             lastCountDataSet: 0,
 
         };
-       
-        // this.audio = new Audio(this.url);
-        // this.sound = new Howl({ 
-        //         src: [
-        //             "../../public/audio/bell.ogg"
-        //         ]
-        // });
+
+      
 
         this.child = React.createRef();
         this.handleChangeGameType = this.handleChangeGameType.bind(this);
     }
     handleChangeGameType(e){
+        // return <Redirect to={{
+        //     pathname: '/login',
+        //     // state: {from: props.location}
+        // }} />
         const {from} = this.props.location.state || {from: {pathname: e.target.value}};
         this.props.history.push(from);
     }
@@ -70,7 +64,7 @@ class LiveTrends extends React.Component{
         });
     }
     asyncCall(){
-        Axios.get('api/summary_grid/swer3', {
+        Axios.get('api/summary_grid/all', {
             cancelToken: new CancelToken(function executor(c) {
                 // An executor function receives a cancel function as a parameter
                 cancel = c;
@@ -86,7 +80,7 @@ class LiveTrends extends React.Component{
 
 
         // getCutoff
-        Axios.get('api/get_cutoff/swer3',{
+        Axios.get('api/get_cutoff/all',{
             cancelToken: new CancelToken(function executor(c) {
                 // An executor function receives a cancel function as a parameter
                 cancel = c;
@@ -100,7 +94,7 @@ class LiveTrends extends React.Component{
         .catch(err=>console.log(err));
         
         // top10
-        Axios.get('api/top_combi/swer3',{
+        Axios.get('api/top_combi/all',{
             cancelToken: new CancelToken(function executor(c) {
                 // An executor function receives a cancel function as a parameter
                 cancel = c;
@@ -113,7 +107,7 @@ class LiveTrends extends React.Component{
         });
 
         // Player Stat
-        Axios.get('api/player_stat/swer3',{
+        Axios.get('api/player_stat/all',{
             cancelToken: new CancelToken(function executor(c) {
                 // An executor function receives a cancel function as a parameter
                 cancel = c;
@@ -126,7 +120,7 @@ class LiveTrends extends React.Component{
         .catch(err=>console.log(err))
 
         // current transaction
-        Axios.get('api/current_trans/swer3',{
+        Axios.get('api/current_trans/all',{
             cancelToken: new CancelToken(function executor(c) {
                 // An executor function receives a cancel function as a parameter
                 cancel = c;
@@ -151,29 +145,26 @@ class LiveTrends extends React.Component{
             cancel();
         }
         clearInterval(_interval);
-        // this.audio.pause();
      }
     componentDidMount(){
-    
-        // var audioCtx = new AudioContext();
-                          
-        // this.sound.play(); 
-       
+        // let session_id = this.props.match.params.session_id;
+        // Axios.get('api/get_session/'+session_id)
+        // .then(res=>{
+        //     if(res.data.length > 0)
+        //     this.setState({isValid: res.data[0].session});
+        // })
+        // .catch(err=>console.log(err));
+        
         $('select').formSelect();
+        
+        // _cancelAxios = Axios.CancelToken.source();
         _interval = setInterval(()=>{
             
             this.asyncCall();
             sound.play();
-            // Howler.volume(1);
         }, 3000);   
 
         this.asyncCall();
-
-        
-        
-        
-
-        
     }
     render(){
         return(
@@ -184,7 +175,7 @@ class LiveTrends extends React.Component{
                     <main className="liveTrend">
                         <div className="row padding-all-15 no-padding">
                             <div className="col s12 no-padding header-banner">
-                                <DashBoardBanner title={"LIVE TRENDS SWER3"} cut_off={this.state.cutoff}/>
+                                <DashBoardBanner title={"LIVE TRENDS ALL"} cut_off={this.state.cutoff} disable={true}/>
                             </div>
                             <div className="clearfix"></div>
 
@@ -192,6 +183,19 @@ class LiveTrends extends React.Component{
                                     <div className="m-top-15 col s12">
                                         <div className="col s12 summary-grd-2">GAME TYPE</div>
                                         <GameType/>
+                                        {/* <div className="col s12 metronic-white-bg">
+                                            <div className="padding-sides-15">
+                                                <div className="input-field m-select-option">
+                                                    <select onChange={this.handleChangeGameType} value="/all">
+                                                        <option value="" disabled >Choose your option</option>
+                                                        <option value="/">all</option>
+                                                        <option value="/swer2">SWER2</option>
+                                                        <option value="/pares">PARES</option>
+                                                        <option value="/all">ALL</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> */}
                                     </div>
                                 <div className="clearfix"></div>
                                     <div className="d-flex mobile-block desk-flex ho-flex">
@@ -277,6 +281,46 @@ class LiveTrends extends React.Component{
                                                     CURRENT TRANSACTIONS
                                                 </div>
                                                 <DataTable DataSet={this.state.dataSet} ref={this.child} />
+                                              {/* <table className="centered responsive-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ACCNT #</th>
+                                                            <th>TRANS #</th>
+                                                            <th>CATEGORY</th>
+                                                            <th>COMBINATION</th>
+                                                            <th>STRAIGHT</th>
+                                                            <th>RUMBLE</th>
+                                                            <th>DATE POSTED</th>
+                                                            <th>SMS</th>
+                                                            <th>EMAIL</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table> */}
                                             </div>
                                         </div>
                                     </div>
@@ -290,8 +334,7 @@ class LiveTrends extends React.Component{
                 </article>
             </div>
         );
-                                           
     }
 }
 
-export default LiveTrends;
+export default LiveTrendsAll;

@@ -7,6 +7,23 @@ use DB;
 
 class AccountController extends Controller
 {
+
+    public $SP_Query = "exec spfunc_W_STL004R
+                        :parmcompid, 
+                        :parmbrcd, 
+                        :parmuserid, 
+                        :parmrcompid, 
+                        :BranchCode, 
+                        :MobileNo, 
+                        :FirstName, 
+                        :LastName, 
+                        :parmemladd, 
+                        :commission,
+                        :parmgndr, 
+                        :parmmtrlstat, 
+                        :parmctznshp, 
+                        :parmusertype";
+                        
     // Get Oprator
     public function getOperator(){
 
@@ -41,7 +58,7 @@ class AccountController extends Controller
 
     //Add GEN COOR
     public function addGenCoor(){
-        dd(request()->all());
+        // dd(request()->all());
         // $data = DB::select("exec spfunc_W_STL004R 
         // '0002','001','00000001','0002','001','12345678910','kris','kris', 'kris.tops@gmail.com','M','S','F','3'");
         $data = DB::select("exec spfunc_W_STL004R
@@ -54,6 +71,7 @@ class AccountController extends Controller
                     :FirstName, 
                     :LastName, 
                     :parmemladd, 
+                    :commission,
                     :parmgndr, 
                     :parmmtrlstat, 
                     :parmctznshp, 
@@ -122,5 +140,76 @@ class AccountController extends Controller
             '1'
         ]);
         return $res;
+    }
+
+
+
+    //Accounting
+    public function addAccounting(){
+        $data = DB::select($this->SP_Query,
+                    request()->all());
+        return $data;
+    }
+
+
+    //Treasury
+    public function addTreasury(){
+        $data = DB::select("exec spfunc_W_STL004R
+                    :parmcompid, 
+                    :parmbrcd, 
+                    :parmuserid, 
+                    :parmrcompid, 
+                    :parmrbrcd, 
+                    :MobileNo, 
+                    :FirstName, 
+                    :LastName, 
+                    :parmemladd, 
+                    :parmgndr, 
+                    :parmmtrlstat, 
+                    :parmctznshp, 
+                    :parmusertype",
+                    request()->all());
+        return $data;
+    }
+
+    //Accounts
+    public function addAccounts(){
+        $data = DB::select("exec spfunc_W_STL004R
+                    :parmcompid, 
+                    :parmbrcd, 
+                    :parmuserid, 
+                    :parmrcompid, 
+                    :parmrbrcd, 
+                    :MobileNo, 
+                    :FirstName, 
+                    :LastName, 
+                    :parmemladd, 
+                    :parmgndr, 
+                    :parmmtrlstat, 
+                    :parmctznshp, 
+                    :parmusertype",
+                    request()->all());
+        return $data;
+    }
+
+
+    //Operation
+    public function addOperation(){
+        $data = DB::select("exec spfunc_W_STL004R
+                    :parmcompid, 
+                    :parmbrcd, 
+                    :parmuserid, 
+                    :parmrcompid, 
+                    :parmrbrcd, 
+                    :MobileNo, 
+                    :FirstName, 
+                    :LastName, 
+                    :parmemladd, 
+                    :parmgndr, 
+                    :parmmtrlstat, 
+                    :parmctznshp, 
+                    :parmusertype",
+                    request()->all());
+        return $data;
     }
 }

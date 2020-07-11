@@ -1,10 +1,10 @@
 @font-face {
     font-family: gotham;
-    src: url('/livetrends/public/fonts/Gotham Medium.otf');
+    src: url('/stl/public/fonts/Gotham Medium.otf');
  }
  
  * {
-    font-family: gotham, sans-serif;
+    font-family: gotham;
  }
 
 body{
@@ -142,20 +142,6 @@ tr.summary-grd-2 > th{
       opacity: 0;
     }
   }
-
-/* table#example{
-    width: 100% !important;
-} */
-
-.datatable-containerx #example th{
-    width: auto !important;
-    padding: 15px 5px !important;
-}
-
-.datatable-containerx #example td{
-    width: auto !important;
-    padding: 15px 5px !important;
-}
 
 
 /* mobile */

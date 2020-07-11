@@ -44,7 +44,7 @@
         <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
         <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script> -->
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.min.js"></script>
 
         <link rel="stylesheet" href="{{ URL::asset('public/css/app.css') }}">
         

@@ -1,23 +1,26 @@
 import React from 'react';
+import Header from '../layout/admin/Header'
+import SideBar from '../layout/admin/SideBar'
+// import '../../css/admin.css';
 import { Redirect } from 'react-router-dom';
 import DataTable from '../components/DataTable';
 import DashBoardBanner from '../components/DashBoardBanner';
 import SummaryGrid2 from '../components/SummaryGrid2';
 import PlayerStatBar from '../components/PlayerStatBar';
 import GameType from '../components/GameType';
+import TopTenCombination from '../components/ToptenCombination';
+import '../../css/LiveTrends.css';  
 import Axios from 'axios';
-import { sound } from '../components/Audio';
+
 
 const moment = window.moment.tz.setDefault('Asia/Manila');
 
-
+// let _cancelAxios = '';
 
 
 const CancelToken = Axios.CancelToken;
 let cancel = '';
 let _interval = '';
-
-// const Howl = window.Howl;
 
 class LiveTrends extends React.Component{
 
@@ -40,18 +43,15 @@ class LiveTrends extends React.Component{
             lastCountDataSet: 0,
 
         };
-       
-        // this.audio = new Audio(this.url);
-        // this.sound = new Howl({ 
-        //         src: [
-        //             "../../public/audio/bell.ogg"
-        //         ]
-        // });
 
         this.child = React.createRef();
         this.handleChangeGameType = this.handleChangeGameType.bind(this);
     }
     handleChangeGameType(e){
+        // return <Redirect to={{
+        //     pathname: '/login',
+        //     // state: {from: props.location}
+        // }} />
         const {from} = this.props.location.state || {from: {pathname: e.target.value}};
         this.props.history.push(from);
     }
@@ -63,119 +63,118 @@ class LiveTrends extends React.Component{
                     <td>{data.gameid}</td>
                     <td>{data.countbet}</td>
                     <td>{data.straight}</td>
-                    <td>{data.rumble}</td>
                     <td>{data.total}</td>
                 </tr>
             );
         });
-    }
-    asyncCall(){
-        Axios.get('api/summary_grid/swer3', {
-            cancelToken: new CancelToken(function executor(c) {
-                // An executor function receives a cancel function as a parameter
-                cancel = c;
-              })
-        })
-        .then(res => {
-            if(res.data.length > 0)
-            {
-                this.setState({summary_grid: res.data[0]});
-            }   
-        })
-        .catch();
-
-
-        // getCutoff
-        Axios.get('api/get_cutoff/swer3',{
-            cancelToken: new CancelToken(function executor(c) {
-                // An executor function receives a cancel function as a parameter
-                cancel = c;
-              })
-        })
-        .then(res=>{
-            if(res.data.length > 0){
-                this.setState({cutoff: res.data[0]});
-            }
-        })
-        .catch(err=>console.log(err));
-        
-        // top10
-        Axios.get('api/top_combi/swer3',{
-            cancelToken: new CancelToken(function executor(c) {
-                // An executor function receives a cancel function as a parameter
-                cancel = c;
-            })
-        })
-        .then(res=>{
-            if(res.data.length > 0){
-                this.setState({top_combination: res.data})
-            }
-        });
-
-        // Player Stat
-        Axios.get('api/player_stat/swer3',{
-            cancelToken: new CancelToken(function executor(c) {
-                // An executor function receives a cancel function as a parameter
-                cancel = c;
-            })
-        })
-        .then(res=>{
-            if(res.data.length > 0)
-            this.setState({player_stat: res.data[0]})
-        })
-        .catch(err=>console.log(err))
-
-        // current transaction
-        Axios.get('api/current_trans/swer3',{
-            cancelToken: new CancelToken(function executor(c) {
-                // An executor function receives a cancel function as a parameter
-                cancel = c;
-            })
-        })
-        .then(res=>{
-            if(res.data.length > 0)
-            {
-                if(this.state.lastCountDataSet != res.data.length){
-                    this.setState({lastCountDataSet: res.data.length});
-                    this.setState({dataSet: res.data});
-                    this.child.current.resetTable(res.data);
-                }
-                
-            }
-            
-        })
-        .catch(err=>console.log(err))
     }
     componentWillUnmount(){
         if(cancel != ''){
             cancel();
         }
         clearInterval(_interval);
-        // this.audio.pause();
      }
     componentDidMount(){
-    
-        // var audioCtx = new AudioContext();
-                          
-        // this.sound.play(); 
-       
+        let session_id = this.props.match.params.session_id;
+        Axios.get('api/get_session/'+session_id)
+        .then(res=>{
+            if(res.data.length > 0)
+            this.setState({isValid: res.data[0].session});
+        })
+        .catch(err=>console.log(err));
+        
+        
         $('select').formSelect();
+        let date = moment('2020-05-14').format('YYYY-MM-DD');
+
+        // _cancelAxios = Axios.CancelToken.source();
+
         _interval = setInterval(()=>{
             
-            this.asyncCall();
-            sound.play();
-            // Howler.volume(1);
+                Axios.get('api/summary_grid/swer3', {
+                    cancelToken: new CancelToken(function executor(c) {
+                        // An executor function receives a cancel function as a parameter
+                        cancel = c;
+                      })
+                })
+                .then(res => {
+                    if(res.data.length > 0)
+                    {
+                        this.setState({summary_grid: res.data[0]});
+                    }   
+                })
+                .catch();
+
+
+                // getCutoff
+                Axios.get('api/get_cutoff/swer3',{
+                    cancelToken: new CancelToken(function executor(c) {
+                        // An executor function receives a cancel function as a parameter
+                        cancel = c;
+                      })
+                })
+                .then(res=>{
+                    if(res.data.length > 0){
+                        this.setState({cutoff: res.data[0]});
+                    }
+                })
+                .catch(err=>console.log(err));
+                
+                // top10
+                Axios.get('api/top_combi/swer3',{
+                    cancelToken: new CancelToken(function executor(c) {
+                        // An executor function receives a cancel function as a parameter
+                        cancel = c;
+                    })
+                })
+                .then(res=>{
+                    if(res.data.length > 0){
+                        this.setState({top_combination: res.data})
+                    }
+                });
+
+                // Player Stat
+                Axios.get('api/player_stat/swer3',{
+                    cancelToken: new CancelToken(function executor(c) {
+                        // An executor function receives a cancel function as a parameter
+                        cancel = c;
+                    })
+                })
+                .then(res=>{
+                    if(res.data.length > 0)
+                    this.setState({player_stat: res.data[0]})
+                })
+                .catch(err=>console.log(err))
+
+                // current transaction
+                Axios.get('api/current_trans/swer3',{
+                    cancelToken: new CancelToken(function executor(c) {
+                        // An executor function receives a cancel function as a parameter
+                        cancel = c;
+                    })
+                })
+                .then(res=>{
+                    if(res.data.length > 0)
+                    {
+                        if(this.state.lastCountDataSet != res.data.length){
+                            this.setState({lastCountDataSet: res.data.length});
+                            this.setState({dataSet: res.data});
+                            this.child.current.resetTable(res.data);
+                        }
+                        
+                    }
+                    
+                })
+                .catch(err=>console.log(err))
+
+            
         }, 3000);   
 
-        this.asyncCall();
-
-        
-        
-        
-
-        
     }
     render(){
+        if(!this.state.isValid){
+            return <div/>
+        }else{
         return(
             <div className="App">
                 {/* <Header title="Dashboard"/> */}
@@ -255,7 +254,6 @@ class LiveTrends extends React.Component{
                                                         <th>Game Type</th>
                                                         <th>Count Bets</th>
                                                         <th>Total Straight</th>
-                                                        <th>Total Rumble</th>
                                                         <th>Total Bets</th>
                                                     </tr>
                                                     </thead>
@@ -274,9 +272,49 @@ class LiveTrends extends React.Component{
                                         <div className="col s12 m-top-15">
                                             <div className="col s12 metronic-white-bg summary-grid push-height no-padding top-combination-table">
                                                 <div className="summary-grd-2">
-                                                    CURRENT TRANSACTIONS
+                                                    TOP 100 CURRENT TRANSACTIONS
                                                 </div>
                                                 <DataTable DataSet={this.state.dataSet} ref={this.child} />
+                                              {/* <table className="centered responsive-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ACCNT #</th>
+                                                            <th>TRANS #</th>
+                                                            <th>CATEGORY</th>
+                                                            <th>COMBINATION</th>
+                                                            <th>STRAIGHT</th>
+                                                            <th>RUMBLE</th>
+                                                            <th>DATE POSTED</th>
+                                                            <th>SMS</th>
+                                                            <th>EMAIL</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                            <td>the quick brown</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table> */}
                                             </div>
                                         </div>
                                     </div>
@@ -290,7 +328,7 @@ class LiveTrends extends React.Component{
                 </article>
             </div>
         );
-                                           
+                                            }
     }
 }
 

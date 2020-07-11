@@ -115,28 +115,29 @@ class UserAccount extends React.Component {
                 parmusertype: '3'
             };
             
-            // Axios.post('api/add_gencoor', formData).then((res)=>{
-            //     if(res.data.length > 0 && res.data[0].RESULT == '1')
-            //     {    
+            Axios.post('api/add_gencoor', formData).then((res)=>{
+                if(res.data.length > 0 && res.data[0].RESULT == '1')
+                { 
+                    console.log(res.data)   ;
                     
-                    closeModal('modal_gencoor', ()=>{
-                        this.reset();
-                    });
+                    // closeModal('modal_gencoor', ()=>{
+                    //     this.reset();
+                    // });
 
-                    success('success');
+                    // success('success');
                     
-                    let append_gencoor = this.state.gencoor_list;
-                    append_gencoor.unshift(formData);
-                    this.setState({gencoor_list: append_gencoor},()=>initDropDown());
+                    // let append_gencoor = this.state.gencoor_list;
+                    // append_gencoor.unshift(formData);
+                    // this.setState({gencoor_list: append_gencoor},()=>initDropDown());
 
                    
                 
                     
-                // }else{
-                //     error('An error occured please try again or check your internet connection');
-                // }
-            // })
-            // .catch();
+                }else{
+                    error('An error occured please try again or check your internet connection');
+                }
+            })
+            .catch();
         }
         
     }

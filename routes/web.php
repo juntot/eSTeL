@@ -51,7 +51,7 @@ Route::get('/api/get_branch', 'BranchController@getBranch');
 
 // V1
 
-Route::get('/{dbname?}/{gameid?}/{key?}', function () {
+Route::get('/{dbnamex?}/{gameid?}/{key?}', function () {
     return view('welcome');
 });
 
